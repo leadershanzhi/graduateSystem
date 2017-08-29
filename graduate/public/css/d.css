@@ -1,0 +1,106 @@
+@charset "utf-8";
+/*
+* yz index css
+* Author: lugp
+* Date: 2013-03-12
+* Version 1.0
+*/
+body, p, ul, li, form, img, h1, h2, h3, select, input {margin:0;padding:0;}
+body{background:#FFFFFF;color:#333;text-align:center;line-height:22px;}
+body, select, option, input, td {font-size:12px;font-family:"Î¢ÈíÑÅºÚ";}
+ul,li {list-style:none;}
+img {border:0;}
+p{ text-indent:2em;}
+a:link,a:visited{color:#333;text-decoration:none;}
+a:hover{color:#990000; text-decoration:underline;}
+.clearFloat{height:0;line-height:0;font-size:0;clear:both;overflow:hidden;}
+.undis{ display:none;}
+
+.colorBlue,a.colorBlue{ color:#08C;}
+.colorRed,a.colorRed{ color:#F00;}
+.colorOrg,a.colorOrg{color:#F60;}
+
+.line01{ margin:0 10px;height:1px; font-size:1px; overflow:hidden; clear:both; border-bottom:1px dotted #AAD5FF;}
+.line02{height:1px; font-size:1px; overflow:hidden; clear:both; border-bottom:1px solid #BFE0F0;}
+.alignCenter{ text-align:center;}
+.margin10{ margin:10px auto;}
+.margin_l{ margin-left:6px;}
+
+.page {width:950px;background:#FFF;margin:0 auto;}
+.header_all{ height:32px; width:950px;font-size:12px; background:#FFF url(http://t1.chsi.com.cn/yz/images/common/header_topbg01.gif) repeat-x bottom;  margin:0px auto;clear:both; color:#333333;}
+.header_all li a,.header_all li a:link,.header_all li a:visited{ color:#333333; text-decoration:none;}
+.header_all li a:hover{ color:#990000; text-decoration:underline;}
+.header_all ul{ width:950px; height:27px; background:url(http://t3.chsi.com.cn/yz/images/common/header_topbg02.gif) no-repeat right;}
+.header_all ul li{height:27px;line-height:30px; float:left; display:inline; background:url(http://t1.chsi.com.cn/yz/images/common/header_topbg02.gif) no-repeat left; padding:0px 9px 0px 10px !important; text-align:center; overflow:hidden;}
+h1{width:536px; height:76px; float:left; display:inline;font-size:1px; color:#FFF; line-height:160px; overflow:hidden; background:url(http://t1.chsi.com.cn/yz/images/index/logo2013.png) no-repeat 0 25px; position:relative;}
+h1 a{ display:block; width:536px; height:76px; line-height:76px; position:absolute; top:0; left:0;}
+h1 a:hover{ text-decoration:none;}
+.h_box{width:400px; height:76px; float:right; position:relative;}
+.h_login_user{ position:absolute; top:0; right:0; width:640px; height:42px; line-height:42px; overflow:hidden;text-align:right;}
+.h_r_all{ position:absolute; top:42px; right:0;width:400px; height:25px;}
+.h_login_btn{height:23px; line-height:23px;float:right; margin-left:10px; padding:0 10px; border:1px solid #DDD; background:url(http://t2.chsi.com.cn/yz/images/index/ban_bg2013.png) no-repeat 0 -84px;}
+.h_search{float:right; margin-left:10px;border:1px solid #DDD;}
+.h_search input.h_s_txt{ height:23px; line-height:23px; border:none; background:#FFF; width:150px; float:left;}
+.h_search input.h_s_submit{height:23px; line-height:23px;border:none; border-left:1px solid #DDD; background:url(http://t3.chsi.com.cn/yz/images/index/ban_bg2013.png) no-repeat 0 -84px; width:40px; float:left; cursor:pointer;}
+
+.h_nav_box{ width:950px; height:75px; background:#2D72B0 url(http://t2.chsi.com.cn/yz/images/index/nav_bg2013.png) no-repeat; margin-bottom:8px;clear:both;}
+.h_nav{ width:950px; height:38px; line-height:38px; text-align:center; color:#FFFFFF;}
+.h_nav a,.h_nav a:link,.h_nav a:visited{color:#FFFFFF;}
+.h_nav a:hover{ color:#FF9;}
+.h_nav_sub{height:30px; line-height:30px; text-align:center;}
+
+.p_l{width:310px; float:left; text-align:left; overflow:hidden;}
+.p_m{width:430px; float:left; display:inline; margin:0 10px; overflow:hidden;}
+.p_r{width:190px; float:left; overflow:hidden;}
+
+.l_flash{ width:310px; height:210px; margin-bottom:10px; overflow:hidden;}
+.l_box{ width:308px; border:1px solid #BFE0F0; overflow:hidden;}
+.l_box h3{ height:25px; line-height:31px; font-size:14px; text-align:center; color:#069; margin:0 10px; background:url(http://t1.chsi.com.cn/yz/images/index/ban_bg2013.png) no-repeat 0 0; clear:both; overflow:hidden;}
+.l_box h3 a,.l_box h3 a:link,.l_box h3 a:visited{color:#069;}
+.l_box h3 span.txt,.l_box h3 a.txt{ padding:0 10px; background:#FFFFFF;}
+.l_box_top{ width:158px; height:6px; background:url(http://t2.chsi.com.cn/yz/images/index/ban_bg2013.png) no-repeat 0 -37px; margin:0 auto; overflow:hidden;}
+.l_box_cnt{ margin:8px 12px; clear:both;}
+.l_box_cnt input{ margin-bottom:8px; /*height:19px; line-height:19px;*/}
+.l_box_cnt select{ margin-bottom:8px; /*height:23px; line-height:23px;*/}
+input.btn01{ width:71px; height:23px; border:none;color:#FFFFFF; background:url(http://t1.chsi.com.cn/yz/images/index/btn2013.png) no-repeat; cursor:pointer;}
+.l_form_width01{ width:100px;}
+.l_form_width02{ width:170px;}
+.l_form_width03{ width:280px;}
+.l_form_width04{ width:133px;}
+
+
+.l_imgandtxt{ margin:10px 12px;}
+.l_imgandtxt img{ width:110px; height:60px; float:left; display:inline; margin-right:10px;}
+.l_imgandtxt ul,.l_imgandtxt p{ width:164px; float:left; display:inline; text-indent:0; line-height:20px; color:#08C;}
+.l_imgandtxt ul li{list-style-position:outside;}
+
+.c_focus{ margin-bottom:10px; padding-top:6px; background:url(http://t4.chsi.com.cn/yz/images/index/ban_bg2013.png) no-repeat 0 -108px; line-height:18px;}
+.c_focus h2{ font-size:16px; height:38px; line-height:38px; overflow:hidden;}
+.c_g_4img{ width:430px; height:40px; overflow:hidden; clear:both; margin-bottom:10px; background:#9C9;}
+
+.p_m h3{ height:29px; line-height:29px; font-size:14px; color:#069; text-align:left; background:#F5FCFE; border-top:1px solid #BFE0F0; border-bottom:1px solid #BFE0F0; padding-left:30px; position:relative; overflow:hidden;}
+.p_m h3 span.icon{ width:12px; height:9px; background:url(http://t2.chsi.com.cn/yz/images/index/ban_bg2013.png) no-repeat 0 -44px; position:absolute; left:10px; top:10px;}
+.p_m h3 span.more{font-weight:normal; position:absolute; right:15px; top:0;}
+.p_m h3 a,.p_m h3 a:link,.p_m h3 a:visited{color:#069;}
+
+.c_news{ margin:8px 10px; font-size:14px; line-height:25px; text-align:left;}
+.c_news_overhide{position:relative; overflow:hidden;}
+.c_news li{ height:25px; line-height:25px; background:url(http://t2.chsi.com.cn/yz/images/common/dot_black.png) no-repeat 0 13px; padding-left:10px; overflow:hidden;}
+
+.r_box{ width:188px; border:1px solid #BFE0F0; background:#F8FCFE; margin-bottom:10px; overflow:hidden;}
+.r_box h3{ height:29px; line-height:29px; border-bottom:1px solid #BFE0F0; font-size:14px; text-align:left; padding-left:28px; color:#069; background:#FFFFFF url(http://t2.chsi.com.cn/yz/images/index/ban_bg2013.png) no-repeat right -54px; position:relative; overflow:hidden;}
+.r_box h3.topBorder{border-top:1px solid #BFE0F0;}
+.r_box h3 span.icon{ width:10px; height:7px; overflow:hidden; background:url(http://t2.chsi.com.cn/yz/images/index/ban_bg2013.png) no-repeat -13px -44px; position:absolute; left:10px; top:11px;}
+.r_box h3 a,.r_box h3 a:link,.r_box h3 a:visited{color:#069;}
+.r_box_txt{ margin:6px 4px 6px 8px; text-align:left;}
+.r_g_2img{ width:190px; height:85px; margin-bottom:10px; overflow:hidden; background:#9CF;}
+
+.g_8img{ width:950px; height:50px; margin-bottom:10px; margin-top:10px; overflow:hidden; background:#CCF;}
+.g_5img{ width:950px; margin-bottom:10px; margin-top:10px; overflow:hidden; background:#CCF;}
+.g_all_txt{ width:948px; margin-bottom:10px; border:1px solid #BFE0F0; overflow:hidden; background:#CCF;}
+
+.title_sub{ width:940px; height:41px; line-height:41px; text-align:right; padding-right:10px; clear:both; margin-bottom:8px;}
+.title_gonggao{background:url(http://t2.chsi.com.cn/yz/images/index/subTitle2013.png) no-repeat 0 0;}
+.title_shuoshi{background:url(http://t3.chsi.com.cn/yz/images/index/subTitle2013.png) no-repeat 0 -42px;}
+.title_txt{color:#069;}
+.title_txt a,.title_txt a:link,.title_txt a:visited{color:#069;}

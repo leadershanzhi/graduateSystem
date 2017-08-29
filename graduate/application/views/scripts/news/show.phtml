@@ -1,0 +1,367 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+</head>
+<style type="text/css">
+<!--
+body {
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+}
+
+.STYLE1 {
+	font-size: 12px
+}
+
+.STYLE3 {
+	font-size: 12px;
+	font-weight: bold;
+}
+
+.STYLE4 {
+	color: #03515d;
+	font-size: 12px;
+}
+
+a {
+	text-decoration: none
+}
+
+a:hover {
+	text-decoration: underline;
+	color: #666666
+}
+-->
+</style>
+
+<script type="text/javascript">
+<!--
+function delcfm(){
+	 var x=prompt("你输入管理员口令");
+	 if(x=="shanzhi"){
+		 window.event.returnValue = true;	
+	 }else{
+		 window.event.returnValue = false;
+		 alert("您无权删除数据");
+	 }
+}
+function delcfmm() {
+    if (!confirm("您确定要删除此条记录？")) {
+        window.event.returnValue = false;
+    }
+}
+
+function openw(id)
+{
+window.open("/news/showone?tag=1&id="+id,null,"width=700,height=400,toolbar=no,top=100,left=400,location=no,directories=no,status=no,menubar=no,scrollbars=yes,resizable=no")
+}
+var  highlightcolor='#c1ebff';
+
+var  clickcolor='#51b2f6';
+function check(){
+   parent.aa();
+}
+function  changeto(){
+source=event.srcElement;
+if  (source.tagName=="TR"||source.tagName=="TABLE")
+return;
+while(source.tagName!="TD")
+source=source.parentElement;
+source=source.parentElement;
+cs  =  source.children;
+//alert(cs.length);
+if  (cs[1].style.backgroundColor!=highlightcolor&&source.id!="nc"&&cs[1].style.backgroundColor!=clickcolor)
+for(i=0;i<cs.length;i++){
+	cs[i].style.backgroundColor=highlightcolor;
+}
+}
+
+function  changeback(){
+if  (event.fromElement.contains(event.toElement)||source.contains(event.toElement)||source.id=="nc")
+return
+if  (event.toElement!=source&&cs[1].style.backgroundColor!=clickcolor)
+//source.style.backgroundColor=originalcolor
+for(i=0;i<cs.length;i++){
+	cs[i].style.backgroundColor="";
+}
+}
+
+function  clickto(){
+source=event.srcElement;
+if  (source.tagName=="TR"||source.tagName=="TABLE")
+return;
+while(source.tagName!="TD")
+source=source.parentElement;
+source=source.parentElement;
+cs  =  source.children;
+//alert(cs.length);
+if  (cs[1].style.backgroundColor!=clickcolor&&source.id!="nc")
+for(i=0;i<cs.length;i++){
+	cs[i].style.backgroundColor=clickcolor;
+}
+else
+for(i=0;i<cs.length;i++){
+	cs[i].style.backgroundColor="";
+}
+}
+
+function callParent(type) {
+	   parent.searchSubForm(type,'<s:property value="pageBean.pageNow"/>','<s:property value="pageBean.totalPages"/>');
+	   }
+
+
+
+
+//-->
+</script>
+
+
+
+
+<body>
+	<table width="100%" border="0" cellspacing="0" cellpadding="0" align="center">
+		<tr>
+			<td height="30" background="/images/tab_05.gif"><table width="100%"
+					border="0" cellspacing="0" cellpadding="0">
+					<tr>
+						<td width="12" height="30"><img src="/images/tab_03.gif" width="12"
+							height="30" /></td>
+						<td><table width="100%" border="0" cellspacing="0" cellpadding="0">
+								<tr>
+									<td width="46%" valign="middle"><table width="100%" border="0"
+											cellspacing="0" cellpadding="0">
+											<tr>
+												<td width="5%"><div align="center">
+														<img src="/images/tb.gif" width="16" height="16" />
+													</div></td>
+												<td width="95%" class="STYLE1">查看通知-仪器纵览</td>
+											</tr>
+										</table></td>
+									<td width="54%"><table border="0" align="right" cellpadding="0"
+											cellspacing="0">
+											<tr>
+												<td width="60"><table width="87%" border="0" cellpadding="0"
+														cellspacing="0">
+
+													</table></td>
+												<td width="60"><table width="90%" border="0" cellpadding="0"
+														cellspacing="0">
+														<tr>
+															<td class="STYLE1"><div align="center">
+																	<img src="/images/22.gif" width="14" height="14" />
+																</div></td>
+
+															<td class="STYLE1"><div align="center">
+															
+																	<A href="/news/write" target="main">发表</A>
+																</div></td>
+                                                    
+														</tr>
+													</table></td>
+												<td width="60"><table width="90%" border="0" cellpadding="0"
+														cellspacing="0">
+
+													</table></td>
+											</tr>
+										</table></td>
+								</tr>
+							</table></td>
+						<td width="16"><img src="/images/tab_07.gif" width="16" height="30" /></td>
+					</tr>
+				</table></td>
+		</tr>
+		<tr>
+			<td><table width="100%" border="0" cellspacing="0" cellpadding="0">
+					<tr>
+						<td width="8" background="/images/tab_12.gif">&nbsp;</td>
+						<td><table width="100%" border="0" cellpadding="0" cellspacing="1"
+								bgcolor="b5d6e6" onmouseover="changeto()"
+								onmouseout="changeback()">
+								 
+								<tr>
+									<td width="3%" height="22" background="/images/tab_05.gif"
+										bgcolor="#FFFFFF"><div align="center">
+											<input type="checkbox" name="checkbox" value="checkbox" />
+										</div></td>
+									
+									<td width="20%" height="22" background="/images/tab_05.gif"
+										bgcolor="#FFFFFF"><div align="center">
+											<span class="STYLE1">消息标题</span>
+										</div></td>
+									
+									
+										<td width="17%" background="/images/tab_05.gif" bgcolor="#FFFFFF"><div
+											align="center">
+											<span class="STYLE1">发布时间</span>
+										</div></td>
+									
+									<td width="10%" height="22" background="/images/tab_05.gif"
+										bgcolor="#FFFFFF"><div align="center">
+											<span class="STYLE1">发布管理员</span>
+										</div></td>
+										<td width="17%" height="22" background="/images/tab_05.gif"
+										bgcolor="#FFFFFF"><div align="center">
+											<span class="STYLE1">发布单位</span>
+										</div></td>
+										<td width="10%" height="22" background="/images/tab_05.gif"
+										bgcolor="#FFFFFF"><div align="center">
+											<span class="STYLE1">评论数</span>
+										</div></td>
+									<td height="22" background="/images/tab_05.gif" bgcolor="#FFFFFF"
+										class="STYLE1"><div align="center">基本操作</div></td>
+
+								</tr>
+								<?php foreach ($this->news as $item){
+									$id=$item['id'];
+							echo "
+							<tr>
+									<td height=20 bgcolor=#FFFFFF><div align=center>
+											<input type=checkbox name=checkbox3 value=checkbox />
+										</div></td>
+									<td height=20 bgcolor=#FFFFFF><div align=center
+											class=STYLE1>
+											<div align=center><a href='#' style='color:#0000FF' onClick='openw($id)'>".$item['title']."</a></div>
+										</div></td>
+									<td height=20 bgcolor=#FFFFFF><div align=center>
+											<span class=STYLE1>".$item['time']."</span>
+										</div></td>
+									<td height=20 bgcolor=#FFFFFF><div align=center>
+											<span class=STYLE1>".$item['scid']."</span>
+										</div></td>
+									<td bgcolor=#FFFFFF><div align=center>
+											<span class=STYLE1>".$item['issuer']."</span>
+										</div></td>
+										<td bgcolor=#FFFFFF><div align=center>
+											<span class=STYLE1>".$item['rcount']."</span>
+										</div></td>
+									
+									
+									<td height=14 bgcolor=#FFFFFF><div align=center>
+											<span class=STYLE4> <img src=/images/edt.gif width=16
+												height=16 />
+												<a href='#' style='color:#0000FF' onClick='openw($id)'>查看</a>
+												
+												<img src=/images/del.gif width=16 height=16 /> <a
+												href='/news/del?id=$id' onClick='delcfm()'>删除</a> 
+											</span>
+										</div></td>
+								</tr>";
+								}?>
+							</table></td>
+						<td width="8" background="/images/tab_15.gif">&nbsp;</td>
+					</tr>
+				</table></td>
+		</tr>
+		<tr>
+			<td height="35" background="/images/tab_19.gif"><table width="100%"
+					border="0" cellspacing="0" cellpadding="0">
+					<tr>
+						<td width="12" height="35"><img src="/images/tab_18.gif" width="12"
+							height="35" /></td>
+						<td><table width="100%" border="0" cellspacing="0" cellpadding="0">
+								<tr>
+									<td class="STYLE4">
+									
+									<?php 
+$pnow=$this->pagebean->pnow;
+$pcount=$this->pagebean->pcount;
+$rcount=$this->pagebean->rcount;
+
+echo  "共_".$rcount."_条记录。共_".$pcount."_页,当前第_".$pnow."_页";
+?>
+									
+									</td>
+									<td><table border="0" align="right" cellpadding="0"
+											cellspacing="0">
+											<tr><!--首页  -->
+												<td width="40"><a href='/news/show?now=1' >
+												<img src="/images/first.gif" width="37"
+													height="15"  />
+													</a>
+													</td>
+													
+													<!-- 上一页 -->
+												<td width="45">
+												<?php 
+												if($pnow>1){
+													$pchange=$pnow-1;
+													echo "<a href='/news/show?now=$pchange'><img src=/images/backk.gif width=43
+														height=15/></a>";
+												}
+												
+												?>
+												
+													</td>
+													<!-- 下一页 -->
+												<td width="45">
+												<?php  
+												if($this->pagebean->pnow<$this->pagebean->pcount){
+													$pchange=$pnow+1;
+													echo "<a href='/news/show?now=$pchange'><img src=/images/next.gif width=43
+													height=15  /></a>";
+												}
+												?>
+													
+													</td>
+													<!-- 尾页 -->
+												<td width="40">
+												<?php 
+												  echo "<a href='/news/show?now=$pcount'>
+												    <img src=/images/last.gif width=37
+													height=15 />
+												  </a>";
+												
+												?> 
+												
+												
+													
+													</td>
+												<td width="100">
+												<form action="" name="PageForm">
+												<div align="center">
+														<span class="STYLE1">第 <input name="page"
+															type="text" size="4"
+															style="height: 12px; width: 20px; border: 1px solid #999999;" />
+															页
+														</span>
+													</div>
+												
+													
+												</td>
+												<td width="40"><img src="/images/go.gif" width="37" onclick="go()"
+													height="15" /></td></form>	
+											</tr>
+										</table></td>
+								</tr>
+							</table></td>
+						<td width="16"><img src="/images/tab_20.gif" width="16" height="35" /></td>
+					</tr>
+				</table></td>
+		</tr>
+	</table>
+	<script type="text/javascript">
+	function go(){
+		var pn=document.PageForm.page.value;
+		var Num = parseInt(pn);
+		if(isNaN(Num)){
+			alert("请输入有效的数字");
+			
+		}
+		else if (Num > <?php echo $pcount?>) {
+			alert("没有那么多页");
+			
+		}
+		else if (Num < 1) {
+			alert("请输入有效的数字");
+			
+		}else{
+		window.location.href="/news/show?now="+Num; }
+	}
+
+</script>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE head PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+</head>
+<LINK href="/css/Style.css" type=text/css rel=stylesheet>
+<LINK href="/css/Manage.css" type=text/css rel=stylesheet>
+
+<META content="MSHTML 6.00.2900.3492" name=GENERATOR>
+  <script type="text/javascript">
+
+	
+	
+	function searchReset(){	
+		document.getElementById("t").value="";
+		document.getElementById("c").value="";	
+		searchform.submit();
+	}
+	
+	function sub(){
+		searchform.submit();		
+	}
+
+</script>
+
+
+
+</HEAD>
+
+
+<body>
+    
+
+
+<TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+  <TR>
+    <TD width=15 background=/images/new_022.jpg>
+    <IMG src="/images/new_022.jpg" border=0> </TD>
+    <TD vAlign=top width="100%" bgColor=#ffffff>
+      <TABLE cellSpacing=0 cellPadding=5 width="100%" border=0>
+        <TR>
+          <TD class=manageHead>当前位置：通知查询&gt; 多种方式查询</TD></TR>
+        <TR>
+          <TD height=2></TD></TR></TABLE>
+            <form action="/news/show" method="post"
+				name="searchform" target="frame1">
+            <TABLE cellSpacing=0 cellPadding=2 border=0>
+              <TR>
+                <TD>按标题模糊查找：</TD>
+                <TD>  
+                   <INPUT name="title" id="t" type=text"></TD>
+                <TD>按内容模糊查找：</TD>
+                <TD>  
+                   <INPUT name="content" id="c" type=text"></TD>
+                <TD>  
+                   <INPUT class=button type=button value=" 查询 " onclick="sub()"></TD>
+                <TD>
+                <INPUT class=button type=button value=" 重置 " onclick="searchReset()"></TD>
+        
+			</TR>
+		  </TABLE>
+		  
+         </form>
+    <hr color="white"/>
+    <div>
+	<iframe name="frame1" frameborder="0" height="425" scrolling="no" width="100%" src="/news/show">
+	</div>
+</body>
+
+</html>
+

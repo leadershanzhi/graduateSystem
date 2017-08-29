@@ -1,0 +1,125 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+		<meta http-equiv="content-type" content="text/html;charset=utf-8"/>
+</head>
+<title>用户登录</title>
+<link rel="stylesheet" type="text/css" href='/css/a.css'/>
+<link rel="stylesheet" type="text/css" href='/css/b.css'/>
+<link rel="stylesheet" type="text/css" href='/css/c.css'/>
+
+<script type="text/javascript">
+ function forgetpw(){
+	 var id=document.form1.id.value;
+	 window.location.href="/student/backpw?id="+id; 
+ }
+ function refresh_code()
+ {
+	 form1.imgcode.src="/php/verifycode.php?a="+Math.random();
+ }
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-100524-7']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+<body>
+
+<style type="text/css">
+#head_wrap {
+    clear: both;
+	background:#fff;
+    font: 12px/1.5 '微软雅黑','宋体',Arial,Helvetica,sans-serif;
+    margin: 0 auto;
+    padding: 0 10px;
+    width: 950px;
+}
+#head_wrap h1 {
+    background: url("/images/logologinn.png") no-repeat scroll 0 25px transparent;
+    color: #FFFFFF;
+    font-size: 1px;
+    height: 76px;
+    line-height: 160px;
+    overflow: hidden;
+    position: relative;
+    width: 536px;
+}
+#head_wrap h1 a {
+    display: block;
+    height: 76px;
+    left: 0;
+    line-height: 76px;
+    position: absolute;
+    top: 0;
+    width: 536px;
+}
+#head_wrap h1 a:hover {
+    text-decoration: none;
+}
+</style>
+<div id="head_wrap">
+  <h1>中国研究生招生信息网<a href="/">&nbsp;</a></h1>
+</div>
+  <div id="content" class="container_24 clearfix">
+  <div class="clearfix" id="user_box">
+  <div class="user-bh"><h2>用户登录</h2></div>
+  <div class="user-bd">
+  <div class="login_tip">
+  <p class="text_center">高校管理部门<a href="/login/manlogin" target="_blank">请点击此处登录</a></p>
+  </div>
+  <div class="login_form">
+  <form method="post" name="form1" action="/login/loginjudge">
+  <table border="0" cellpadding="0" cellspacing="0" >
+  <tbody>
+   <tr>
+  <td>&nbsp;</td>
+  <td colspan="2" class="red"></td>
+  </tr>
+  <tr>
+  <td class="text_right">账号：</td>
+  <td><input class="bbsInput_short" required="required"  name="id" type="text" tabindex="1" value='271040219' /></td>
+  <td><a href="/student/sturegister" >没有注册？</a></td>
+  </tr>
+  <tr>
+  <td class="text_right">密码：</td>
+  <td><input class="bbsInput_short" required="required" name="pw" type="password" tabindex="2" value='shanzhi' /></td>
+  <td><a href="javascript:void(0)" onclick="forgetpw()" >忘记密码？</a></td>
+  </tr>
+  <tr>
+  <td class="text_right">验证码：</td>
+  <td colspan="2"><input  name="code"  style="width:80px;"  type="text" tabindex="3" />&nbsp;&nbsp;&nbsp;<img id="imgcode" src="/php/VerifyCode.php" alt="验证码" />
+  &nbsp;<a href="javascript:refresh_code()">换一张</a></td>
+  </tr>
+  <tr>
+   <td ><font color="#336600" size="2" face="幼圆"><?php echo $this->err?></font></td>
+  <td colspan="2">
+  <input type="submit" class="buttonDeep" style="width:72%; margin-top:15px;" value="登&#12288;录" tabindex="4" />
+  </td>
+  </tr>
+  </tbody>
+  </table>
+  <input type="hidden" name="trnd" value="5896330857637095"/>
+  
+  </form>
+  </div>
+  
+  </div>
+  </div>
+  </div>
+  
+
+
+<hr/>
+<div align=center>
+<iframe width="950" height="93" src="/index/foot" scrolling="no" frameborder="0"></iframe>
+</div>
+
+
+</body>
+</html>

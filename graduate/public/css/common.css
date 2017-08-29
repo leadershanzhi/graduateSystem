@@ -1,0 +1,107 @@
+@charset "utf-8";
+html,body,p,ul,li,form,img,h1, h2, h3, h4, h5, h6,input,select,fieldset{margin:0;padding:0;}
+body{color:#333; font:normal 12px/22px "宋体",Verdana,Arial,Helvetica,sans-serif; /*background:#cee3ed url(http://t4.chsi.com.cn/yz/images/common/mainBG.jpg) top repeat-x fixed;*/}
+input,select,option{font-size:12px;}
+li{list-style:none;}
+img{border:0;vertical-align:middle;}
+em{font-style:normal;font-weight:normal;}
+a:link,a:visited{color:#333;text-decoration:none;}
+a:hover{color:#BA2636;text-decoration:underline;}
+.clearFloat{height:0;line-height:0;font-size:0;clear:both;overflow:hidden;}
+.bigfont{font-size:14px;}
+.hot{background:url(http://t2.chsi.com.cn/yz/images/common/dot_hot.jpg) right top no-repeat;display:block;}
+.center{margin:0 auto;text-align:center !important;}
+.noBG{background:none !important;}
+.noBorder{border:none !important;}
+.noMargin{margin:0 !important;}
+.noPadding{padding:0 !important;}
+.pad10{padding:10px !important;}
+.top10{margin-top:10px !important;}
+.color1{color:#BA2636 !important;}
+.color2{color:#0068A3 !important;}
+.color3{color:#f30 !important;}
+
+.openwin{width:0;height:0;border:0;position:absolute;}
+.whiteBG{width:950px;margin:0 auto;clear:both;background:#fff;padding:0 10px;}
+.header_all{width:950px;height:32px; background:url(http://t1.chsi.com.cn/yz/images/common/header_topbg01.gif) repeat-x bottom;margin:0 auto; clear:both; text-align:left;}
+.header_all ul{ width:950px; height:27px; background:url(http://t1.chsi.com.cn/yz/images/common/header_topbg02.gif) no-repeat right;}
+.header_all ul li{height:27px;line-height:30px; float:left; display:inline; background:url(http://t1.chsi.com.cn/yz/images/common/header_topbg02.gif) no-repeat left; padding:0px 9px 0 9px; text-align:center; overflow:hidden;}
+.header_all a:link,.header_all a:visited{color:#333;text-decoration:none;}
+.header_all a:hover{color:#990000; text-decoration:underline;}
+
+.header_logo{width:950px;height:36px;background:#fff url(http://t2.chsi.com.cn/yz/images/common/logo.gif) no-repeat 0px 2px;margin:0 auto;text-align:right;color:#333;overflow:hidden;clear:both;}
+.keywords{display:inline;float:right;width:520px;word-spacing:5px;height:16px;margin-top:8px;}
+.search{float:right;width:157px;height:16px;display:block;margin:8px 0 0 10px;border:1px solid #999;background:#f7f8fa url(http://t4.chsi.com.cn/yz/images/common/search.jpg) 1px 1px no-repeat;padding:1px 1px 1px 18px;}
+.search input{vertical-align:middle;}
+.searchTXT{border:0;width:115px;padding-left:5px;height:14px;line-height:14px;display:inline;float:left;background:#f7f8fa;}
+.searchBTN{border:0;background:#0068A3;width:30px;height:16px;line-height:14px;color:#fff;float:right;text-align:center;padding:0;}
+
+.localMenu1{width:950px;height:35px;background:#2a8dc6 url(http://t2.chsi.com.cn/yz/images/common/localMenu1.jpg) no-repeat;margin:0 auto;overflow:hidden;}
+.localMenu2{width:950px;height:56px;background:url(http://t3.chsi.com.cn/yz/images/common/localMenu2.jpg) no-repeat;margin:0 auto;overflow:hidden;}
+.menu1{width:950px;text-align:center;color:#fff;font:normal 12px/22px "微软雅黑","宋体";word-spacing:5px;height:22px;padding:7px 0 8px 10px;}
+.menu1 a{display:block;padding:0 8px;float:left;outline:none;star:expression(this.onFocus=this.blur());}
+.menu1 span{display:block;width:24px;height:22px;float:left;background:url(http://t3.chsi.com.cn/yz/images/common/menuDiv.jpg) center center no-repeat;}
+.menu1 a:link,.menu1 a:visited{color:#fff;}
+.menu1 a:hover{color:#FFCC66;text-decoration:none;}
+.menu2{width:950px;color:#555;height:44px;padding:6px 0 8px 5px;}
+.menu2 li{width:295px;margin-right:5px;float:left;padding-left:15px;display:inline;}
+.menu2 strong{display:block;float:left;width:45px;}
+.menu2 a{display:block;float:left;width:60px;text-align:center;outline:none;star:expression(this.onFocus=this.blur());}
+.menu2 a:link,.menu2 a:visited{color:#555;}
+.menu2 a:hover{color:#BA2636;text-decoration:none;}
+
+
+.loginBar{width:948px;height:22px;border:1px solid #e3e3e3;background:url(http://t1.chsi.com.cn/yz/images/common/loginBG.jpg) repeat-x;margin:5px auto 0 auto;padding:5px 0;}
+.loginBar input,.loginBar a{margin:0 auto;vertical-align:middle;}
+.daojishi{width:285px;float:left;display:inline;height:22px;display:inline;margin:0 10px 0 10px;overflow:hidden;padding-left:25px;background:url(http://t3.chsi.com.cn/yz/images/common/arrow.jpg) left center no-repeat;color:#BA2636;}
+#scrollDiv li{line-height:22px;height:22px;overflow:hidden;}
+.adminLogin{width:100px;float:right;display:inline;height:22px;display:inline;margin:0 10px 0 0;}
+.login{width:515px;float:left;display:inline;height:22px;display:inline;margin:0 10px 0 0;overflow:hidden;}
+.loginTXT{border:1px solid #ccc;width:80px;height:16px;line-height:16px;}
+.loginTXT:hover{border:1px solid #9cf;}
+.loginBTN{border:0;background:url(http://t2.chsi.com.cn/yz/images/common/login.jpg) no-repeat;width:35px;height:20px;}
+
+.footer{width:950px; padding:10px 0px 10px 0; margin:0 auto;border-top:1px solid #999999; text-align:center; font-size:12px; color:#333; line-height:24px;clear:both;background:#fff;}
+
+#floatDH{width:100%;margin:0 auto;position:fixed;left:0;bottom:0;height:38px;}
+#dhBG{width:100%;height:38px;margin:0 auto;background:url(http://t1.chsi.com.cn/yz/images/common/dh_BG.png) bottom repeat-x;}
+#holdDH{width:970px;margin:0 auto;height:38px;position:relative;overflow:hidden;}
+#dh_logo{width:146px;height:38px;position:absolute;top:0px;left:0;}
+#dh_menu{width:400px;height:30px;position:absolute;left:160px;top:8px;}
+#dh_gg{width:350px;height:30px;line-height:30px;position:absolute;left:560px;top:8px;color:#fff;}
+#dh_close{width:17px;height:17px;display:block;position:absolute;cursor:pointer;z-index:999;text-align:center;}
+.closeDH{background:url(http://t1.chsi.com.cn/yz/images/common/dh_close.gif) no-repeat;right:5px;top:16px;}
+.openDH{width:22px !important;height:84px !important;background:url(http://t4.chsi.com.cn/yz/images/common/dh_open.png) no-repeat;right:0;top:0px;}
+
+#dh_menu a{width:56px;height:21px;float:left;display:inline;background:url(http://t2.chsi.com.cn/yz/images/common/dh_button.png) no-repeat;padding-left:12px;margin:5px 0 0 10px;}
+#dh_menu a:hover{text-decoration:none;}
+#dh_gg a:link,#dh_gg a:visited{color:#fff;}
+
+
+.zsbBox{width:950px;background:#eef6fc url(http://t3.chsi.com.cn/yz/images/search/search_Top.jpg) no-repeat;margin:0px auto;}
+.zsbTitle{width:400px;margin:0 auto;padding-top:10px;font-size:14px;font-weight:600;color:#a60;text-align:center;line-height:22px;height:22px;}
+.cnt{width:950px;background:url(http://t2.chsi.com.cn/yz/images/search/search_Bottom.jpg) bottom no-repeat;margin:0;padding:6px 0 20px;}
+.zsb_sub_box{ width:868px; border:1px solid #a9ccde; background:#FFFFFF; padding:10px 20px;height:auto!important;height:200px;min-height:200px; text-align:left; line-height:21px; overflow-x:auto;margin:0 auto;}
+.cnt h3{font-size:14px; color:#005690; text-align:center;}
+.contPart_zsb{width:948px;margin:0 auto;padding:10px 0;background:#EBF5FD;border:1px solid #2D91CE;}
+
+.midBox{width:950px;background:#fff url(http://t3.chsi.com.cn/yz/images/search/search_Top.jpg) center 10px no-repeat;margin:0px auto 0px auto;padding:10px;}
+.cnt{width:910px;background:url(http://t2.chsi.com.cn/yz/images/search/search_Bottom.jpg) bottom no-repeat;margin:0;padding:6px 20px 20px;}
+.whiteBox{ width:908px; background:#FFFFFF; border:1px solid #a9ccde;}
+
+
+.gg950{width:960px;padding:10px 0 0 10px;background:#fff;overflow:hidden;clear:both;margin:0 auto;}
+.gg950 a{float:left;display:inline;width:185px;height:60px;overflow:hidden;margin-right:6px;}
+.gg950 img{width:185px;height:60px;overflow:hidden;}
+
+.gg950_1{width:960px;padding:10px 0 0 10px;background:#fff;overflow:hidden;clear:both;margin:0 auto;}
+.gg950_1 a{}
+.gg950_1 img{width:950px;overflow:hidden;}
+
+.gg950_2{width:960px;padding:10px 0 0 10px;background:#fff;overflow:hidden;clear:both;margin:0 auto;}
+.gg950_2 img{width:473px;height:50px;overflow:hidden;}
+
+.gg950_4{width:960px;padding:10px 0 0 10px;background:#fff;overflow:hidden;clear:both;margin:0 auto;}
+.gg950_4 a{margin-right:16px;}
+.gg950_4 img{width:224px;height:40px;overflow:hidden;}
+/*****************************公用部分********************************/

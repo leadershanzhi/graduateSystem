@@ -1,0 +1,644 @@
+/**研招2013改版，基本样式huanghui@2013.07.03**/
+/**base.css**/
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, button, textarea, p, blockquote, th, td {
+	margin: 0;
+	padding: 0;
+	font-family: '\5FAE\8F6F\96C5\9ED1', '\5B8B\4F53', Arial, Helvetica, sans-serif;
+}
+fieldset, img {
+	border: 0
+}
+:focus {
+	outline: 0
+}
+abbr, acronym {
+	border: 0;
+	font-variant: normal
+}
+input, button, textarea, select, optgroup, option {
+	font-family: inherit;
+	font-size: inherit;
+	font-style: inherit;
+	font-weight: inherit
+}
+code, kbd, samp, tt {
+	font-size: 100%
+}
+input, button, textarea, select {
+*font-size:100%;
+	resize: none;
+}
+textarea:focus {
+	outline: none;
+}
+body {
+	font-size: 12px;
+	line-height: 1.5;
+	background-color:#ffffff;
+}
+ol, ul {
+	list-style: none
+}
+
+
+
+th,
+td,
+caption {
+  font-weight: normal;
+  text-align: left;
+}
+
+caption, th {
+	text-align: left
+}
+/* input[type='text'] */
+input[type='text'],textarea {
+	display: inline-block;
+	width: 120px;
+	padding-left: 3px;
+	font-size: 12px;
+	color: #555555;
+	border: 1px solid #cccccc;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	vertical-align: middle;
+	vertical-align: auto;
+}
+input[type='text']{
+	height: 24px;
+	line-height:24px;
+}
+input[type='text']:hover,textarea:hover {
+	border-color: rgba(82,168,236,.8);
+	-webkit-box-shadow: inset 0 1px 3px rgba(0,0,0,.1), 0 0 8px rgba(82,168,236,.6);
+	-moz-box-shadow: inset 0 1px 3px rgba(0,0,0,.1), 0 0 8px rgba(82,168,236,.6);
+	box-shadow: inset 0 1px 3px rgba(0,0,0,.1), 0 0 8px rgba(82,168,236,.6);
+	outline: 0;
+}
+/**select**/
+select {
+	display: inline-block;
+	height: 26px;
+	padding: 3px;
+	font-size: 12px;
+	color: #555555;
+	border: 1px solid #cccccc;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	vertical-align: middle;
+	vertical-align: auto;
+}
+select:hover {
+	border-color: rgba(82,168,236,.8);
+	-webkit-box-shadow: inset 0 1px 3px rgba(0,0,0,.1), 0 0 8px rgba(82,168,236,.6);
+	-moz-box-shadow: inset 0 1px 3px rgba(0,0,0,.1), 0 0 8px rgba(82,168,236,.6);
+	box-shadow: inset 0 1px 3px rgba(0,0,0,.1), 0 0 8px rgba(82,168,236,.6);
+	outline: 0;
+}
+/**input[type='radio']**/
+input[type='radio'] {
+	margin: 1px 5px;
+	vertical-align: text-top;
+ *vertical-align:middle;
+}
+/**input[type='checkbox']**/
+input[type='checkbox'] {
+	margin: 1px 5px;
+	vertical-align: text-top;
+ *vertical-align:middle;
+}
+/**a标签**/
+a, a:link, a:active, a:visited {
+	color: #056BC9;
+	text-decoration: none;
+}
+a:hover {
+	color: #619DD3;
+	text-decoration: underline;
+}
+
+/**button.css**/
+/* 第一种按钮样式 */
+.buttonPro {
+	padding: 0 10px;
+	height: 27px;
+	line-height: 25px;
+	*line-height:21px;
+	vertical-align: bottom;
+	font-size: 12px;
+	border: 1px solid #e5e5e5;
+	display:inline-block;
+	color: #706F6F;
+	cursor: pointer;
+	margin-bottom: 1px;
+	/**圆角**/ 
+	-webkit-border-radius: 4px;
+	border-radius: 4px;
+	background-clip: padding-box;
+	/**阴影**/
+	-webkit-box-shadow: 0px 0px 4px 0px #dedede;
+	box-shadow: 0px 0px 4px 0px #dedede;
+	/**渐变**/
+	background-color: #f0f0f0;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#f0f0f0));
+	background-image: -webkit-linear-gradient(top, #ffffff, #f0f0f0);
+	background-image: -moz-linear-gradient(top, #ffffff, #f0f0f0);
+	background-image: -o-linear-gradient(top, #ffffff, #f0f0f0);
+	background-image: linear-gradient(to bottom, #ffffff, #f0f0f0);
+ filter: progid:DXImageTransform.Microsoft.gradient(startColorStr = #ffffff, EndColorStr = #f0f0f0);
+}
+.buttonPro:hover {
+	background-color: #e9e9e9;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#e9e9e9));
+	background-image: -webkit-linear-gradient(top, #ffffff, #e9e9e9);
+	background-image: -moz-linear-gradient(top, #ffffff, #e9e9e9);
+	background-image: -o-linear-gradient(top, #ffffff, #e9e9e9);
+	background-image: linear-gradient(to bottom, #ffffff, #e9e9e9);
+ filter: progid:DXImageTransform.Microsoft.gradient(startColorStr = #ffffff, EndColorStr = #e9e9e9);
+}
+.buttonPro:active {
+	background-color: #f0f0f0;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#f0f0f0), to(#ffffff));
+	background-image: -webkit-linear-gradient(top, #f0f0f0, #ffffff);
+	background-image: -moz-linear-gradient(top, #f0f0f0, #ffffff);
+	background-image: -o-linear-gradient(top, #f0f0f0, #ffffff);
+	background-image: linear-gradient(to bottom, #f0f0f0, #ffffff);
+ filter: progid:DXImageTransform.Microsoft.gradient(startColorStr = #f0f0f0, EndColorStr = #ffffff);
+}
+/**第二种按钮样式**/
+.buttonSel {
+	padding: 0 10px;
+	height: 27px;
+	line-height: 25px;
+	*line-height:21px;
+	vertical-align: bottom;
+	font-size: 12px;
+	border: 1px solid #d7d7d7;
+	display:inline-block;
+	color: #706F6F;
+	cursor: pointer;
+	margin-bottom: 1px;
+	/**圆角**/ 
+	-webkit-border-radius: 4px;
+	border-radius: 4px;
+	background-clip: padding-box;
+	/**阴影**/
+	-webkit-box-shadow: 0px 0px 4px 0px #dedede;
+	box-shadow: 0px 0px 4px 0px #dedede;
+	/**渐变**/
+	background-color: #f2f2f2;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#f2f2f2));
+	background-image: -webkit-linear-gradient(top, #ffffff, #f2f2f2);
+	background-image: -moz-linear-gradient(top, #ffffff, #f2f2f2);
+	background-image: -o-linear-gradient(top, #ffffff, #f2f2f2);
+	background-image: linear-gradient(to bottom, #ffffff, #f2f2f2);
+ filter: progid:DXImageTransform.Microsoft.gradient(startColorStr = #ffffff, EndColorStr = #f2f2f2);
+}
+.buttonSel:hover {
+	border-color: rgba(82,168,236,.8);
+	-webkit-box-shadow: inset 0 1px 3px rgba(0,0,0,.1), 0 0 8px rgba(82,168,236,.6);
+	-moz-box-shadow: inset 0 1px 3px rgba(0,0,0,.1), 0 0 8px rgba(82,168,236,.6);
+	box-shadow: inset 0 1px 3px rgba(0,0,0,.1), 0 0 8px rgba(82,168,236,.6);
+	outline: 0;
+	background-color: #e9e9e9;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#fbfbfb));
+	background-image: -webkit-linear-gradient(top, #ffffff, #fbfbfb);
+	background-image: -moz-linear-gradient(top, #ffffff, #fbfbfb);
+	background-image: -o-linear-gradient(top, #ffffff, #fbfbfb);
+	background-image: linear-gradient(to bottom, #ffffff, #fbfbfb);
+ filter: progid:DXImageTransform.Microsoft.gradient(startColorStr = #ffffff, EndColorStr = #fbfbfb);
+}
+.buttonSel:active {
+	border: 1px solid #d7d7d7;
+	-webkit-box-shadow: 0px 0px 4px 0px #cddcee;
+	box-shadow: 0px 0px 4px 0px #cddcee;
+	background-color: #f2f2f2;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#f8f8f8), to(#f2f2f2));
+	background-image: -webkit-linear-gradient(top, #f8f8f8, #f2f2f2);
+	background-image: -moz-linear-gradient(top, #f8f8f8, #f2f2f2);
+	background-image: -o-linear-gradient(top, #f8f8f8, #f2f2f2);
+	background-image: linear-gradient(to bottom, #f8f8f8, #f2f2f2);
+ filter: progid:DXImageTransform.Microsoft.gradient(startColorStr = #f8f8f8, EndColorStr = #f2f2f2);
+}
+/**第三种按钮样式 深色按钮buttonDeep**/
+.buttonDeep {
+	padding: 0 10px;
+	height: 27px;
+	line-height: 25px;
+	*line-height:21px;
+	vertical-align: bottom;
+	font-size: 12px;
+	border: 1px solid #53A8F7;
+	display:inline-block;
+	color: white;
+	cursor: pointer;
+	margin-bottom: 1px;
+	-webkit-border-radius: 4px;
+	border-radius: 4px;
+	background-clip: padding-box;
+	-webkit-box-shadow: 0px 0px 4px 0px #dedede;
+	box-shadow: 0px 0px 4px 0px #dedede;
+	background-color: #4275A3;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#60B2FC), to(#4275A3));
+	background-image: -webkit-linear-gradient(top, #60B2FC, #4275A3);
+	background-image: -moz-linear-gradient(top, #60B2FC, #4275A3);
+	background-image: -o-linear-gradient(top, #60B2FC, #4275A3);
+	background-image: linear-gradient(to bottom, #60B2FC, #4275A3);
+ filter: progid:DXImageTransform.Microsoft.gradient(startColorStr = #60B2FC, EndColorStr = #4275A3);
+}
+.buttonDeep:hover {
+	border-color: rgba(82,168,236,.8);
+	-webkit-box-shadow: inset 0 1px 3px rgba(0,0,0,.1), 0 0 8px rgba(82,168,236,.6);
+	-moz-box-shadow: inset 0 1px 3px rgba(0,0,0,.1), 0 0 8px rgba(82,168,236,.6);
+	box-shadow: inset 0 1px 3px rgba(0,0,0,.1), 0 0 8px rgba(82,168,236,.6);
+	outline: 0;
+	background-color: #3D719E;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#3D719E), to(#60B2FC));
+	background-image: -webkit-linear-gradient(top, #3D719E, #60B2FC);
+	background-image: -moz-linear-gradient(top, #3D719E, #60B2FC);
+	background-image: -o-linear-gradient(top, #3D719E, #60B2FC);
+	background-image: linear-gradient(to bottom, #3D719E, #60B2FC);
+ filter: progid:DXImageTransform.Microsoft.gradient(startColorStr = #3D719E, EndColorStr = #60B2FC);
+}
+.buttonDeep:active {
+	border: 1px solid #d7d7d7;
+	-webkit-box-shadow: 0px 0px 4px 0px #cddcee;
+	box-shadow: 0px 0px 4px 0px #cddcee;
+	background-color: #539BDB;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#539BDB), to(#326086));
+	background-image: -webkit-linear-gradient(top, #539BDB, #326086);
+	background-image: -moz-linear-gradient(top, #539BDB, #326086);
+	background-image: -o-linear-gradient(top, #539BDB, #326086);
+	background-image: linear-gradient(to bottom, #539BDB, #326086);
+ filter: progid:DXImageTransform.Microsoft.gradient(startColorStr = #539BDB, EndColorStr = #326086);
+}
+/**ulMenu.css**/
+ul.ulMenu {
+	border: 1px solid #E9E7E7;
+	text-align: left;
+	-webkit-border-radius: 4px;
+	border-radius: 4px;
+	background-clip: padding-box;
+	font-size: 12px;
+	-webkit-box-shadow: 1px 1px 2px 1px #EEECEC;
+	box-shadow: 1px 1px 2px 1px #EEECEC;
+	font-family: Arial, "微软雅黑";
+}
+ul.ulMenu li {
+	cursor: pointer;
+	margin: 1px;
+	height: 36px;
+	line-height: 36px;
+	border-top: 1px solid #E9E7E7;
+	padding-left: 10px;
+	background-color: #F8F8F8;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#F8F8F8));
+	background-image: -webkit-linear-gradient(top, #ffffff, #F8F8F8);
+	background-image: -moz-linear-gradient(top, #ffffff, #F8F8F8);
+	background-image: -o-linear-gradient(top, #ffffff, #F8F8F8);
+	background-image: linear-gradient(to bottom, #ffffff, #F8F8F8);
+ filter: progid:DXImageTransform.Microsoft.gradient(startColorStr = #ffffff, EndColorStr = #F8F8F8);
+}
+ul.ulMenu li:first-child {
+	border-top: 0;
+}
+ul.ulMenu a{
+	height: 35px;
+	width: 130px;
+	display: inline-block;
+}
+ul.ulMenu li, ul.ulMenu a {
+	color: #535353;
+}
+ul.ulMenu li:hover, ul.ulMenu li a:hover {
+	color: #2164a1;
+}
+ul.ulMenu li.selected, ul.ulMenu li.selected a {
+	color: black;
+	font-weight: bold;
+}
+ul.ulMenu li.selected, ul.ulMenu li.selected a {
+	background-color: #B8DAF8;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#CFE7FC), to(#B8DAF8));
+	background-image: -webkit-linear-gradient(top, #CFE7FC, #B8DAF8);
+	background-image: -moz-linear-gradient(top, #CFE7FC, #B8DAF8);
+	background-image: -o-linear-gradient(top, #CFE7FC, #B8DAF8);
+	background-image: linear-gradient(to bottom, #CFE7FC, #B8DAF8);
+ filter: progid:DXImageTransform.Microsoft.gradient(startColorStr = #CFE7FC, EndColorStr = #B8DAF8);
+}
+/**table.css**/
+/**第一种table**/
+.tablePro {
+	width: 100%;
+	border-collapse: collapse;
+	border-spacing: 0;
+	background-color: transparent;
+}
+.tablePro tr {
+/*border-bottom: 1px solid #ddd;	*/
+}
+.tablePro tr th {
+	font-weight: bold;
+	height: 32px;
+	line-height: 32px;
+	border-bottom: 1px solid #ddd;
+}
+.tablePro tr td {
+	padding-left: 6px;
+	height: 30px;
+	line-height: 30px;
+	border:0;
+	border-bottom: 1px solid #ddd;
+	word-break: break-all;
+	word-wrap: break-word;
+}
+.tablePro tr td.text_center{
+	padding:0;
+	text-align:center;
+}
+.tablePro tbody tr:hover {
+	background-color: #FEFFE8;
+}
+/**没有信息的tr*/
+.tablePro tr.noResult td {
+	height: 80px;
+	line-height: 80px;
+	text-align: center;
+	background-color: #FBFCEF;
+	color: #CA2654;
+}
+/**第二种 背景交替的表格  tableStriped**/
+.tableStriped tbody tr:nth-child(odd) td {
+	background-color: #f9f9f9;
+}
+/**第三种 有边线的表格 tableBordered**/
+.tableBordered {
+	border: 1px solid #ddd;
+	border-bottom: 0;
+	border-collapse: separate;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+}
+.tableBordered thead tr {
+	background-color: #f0f0f0;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#f0f0f0));
+	background-image: -webkit-linear-gradient(top, #ffffff, #f0f0f0);
+	background-image: -moz-linear-gradient(top, #ffffff, #f0f0f0);
+	background-image: -o-linear-gradient(top, #ffffff, #f0f0f0);
+	background-image: linear-gradient(to bottom, #ffffff, #f0f0f0);
+ filter: progid:DXImageTransform.Microsoft.gradient(startColorStr = #ffffff, EndColorStr = #f0f0f0);
+}
+.tableBordered tbody tr {
+	border-top: 1px solid #ddd;
+}
+.tableBordered tr th {
+	border-left: 1px solid #DDD;
+	text-align: center;
+}
+.tableBordered tr th:first-child {
+	border-left: 0px;
+}
+.tableBordered tr td {
+	padding: 2px 0px 2px 6px;
+}
+/***第四种 深色按钮 tableDeep**/
+.tableDeep thead tr {
+	color: #ffffff;
+	background-color: #5194d1;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#5194d1), to(#2d72b0));
+	background-image: -webkit-linear-gradient(top, #5194d1, #2d72b0);
+	background-image: -moz-linear-gradient(top, #5194d1, #2d72b0);
+	background-image: -o-linear-gradient(top, #5194d1, #2d72b0);
+	background-image: linear-gradient(to bottom, #5194d1, #2d72b0);
+ filter: progid:DXImageTransform.Microsoft.gradient(startColorStr = #5194d1, EndColorStr = #2d72b0);
+}
+.tableDeep tr th {
+	border-left: 1px solid #DDD;
+	text-align: center;
+	height:36px;
+	line-height:36px;
+}
+.tableDeep tbody tr:hover {
+	background-color: #FEFFE8;
+}
+.tableDeep tbody tr:nth-child(even) {
+	background-color: #f9f9f9;
+}
+/**第五种 省略显示的table   tableHidden**/
+.tableHidden {
+	table-layout: fixed;
+}
+.tableHidden td {
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;/* 当对象内文本溢出时显示省略标记(...) ；需与overflow:hidden;一起使用。*/
+	-o-text-overflow: ellipsis;  /*-o-就是以Presto为引擎的 Opera私有的*/
+	-icab-text-overflow: ellipsis; /*-icab-是iCab私有的*/
+	-khtml-text-overflow: ellipsis;  /* -khtml-就是以KHTML为引擎的浏览器（如Konqueror Safari）*/
+	-moz-text-overflow: ellipsis;      /*-moz-就是以mozilla的Gecko为引擎的浏览器（如Firefox，mozilla）*/
+	-webkit-text-overflow: ellipsis;    /* -webkit-就是以Webkit 渲染引擎（是KHTML的衍生产品）的浏览器（如Safari、Swift）*/
+}
+/*
+*page.css**/
+ul.ulPage {
+	color: #535353;
+	height: 40px;
+	line-height: 40px;
+	float: right;
+}
+ul.ulPage li {
+	cursor: pointer;
+	float: left;
+	text-align: center;
+	height: 28px;
+	line-height: 28px;
+	padding: 5px 10px;
+}
+ul.ulPage li.lip {
+	padding:0 8px;
+	margin: 5px;
+	border: 1px solid #DDD;
+	-webkit-border-radius: 4px;
+	border-radius: 4px;
+	background-clip: padding-box;
+	-webkit-box-shadow: 0px 0px 4px 0px #dedede;
+	box-shadow: 0px 0px 4px 0px #dedede;
+	background-color: #f0f0f0;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#f0f0f0));
+	background-image: -webkit-linear-gradient(top, #ffffff, #f0f0f0);
+	background-image: -moz-linear-gradient(top, #ffffff, #f0f0f0);
+	background-image: -o-linear-gradient(top, #ffffff, #f0f0f0);
+	background-image: linear-gradient(to bottom, #ffffff, #f0f0f0);
+ filter: progid:DXImageTransform.Microsoft.gradient(startColorStr = #ffffff, EndColorStr = #f0f0f0);
+}
+ul.ulPage li.selected {
+	border-color: #FAFAFA;
+	color:#fff;
+	background-color: #5195d2;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#5195d2), to(#5195d2));
+	background-image: -webkit-linear-gradient(top, #5195d2, #5195d2);
+	background-image: -moz-linear-gradient(top, #5195d2, #5195d2);
+	background-image: -o-linear-gradient(top, #5195d2, #5195d2);
+	background-image: linear-gradient(to bottom, #3B6FA8, #5195d2);
+ filter: progid:DXImageTransform.Microsoft.gradient(startColorStr = #5195d2, EndColorStr = #5195d2);
+}
+ul.ulPage li.unable,ul.ulPage li.unable a {
+	cursor: default;
+}
+ul.ulPage li.lip a{
+	color: #535353;
+	display: inline-block;
+	height: 28px;
+	line-height: 28px;
+}
+ul.ulPage li a:hover {
+	color: #2164a1;
+}
+ ul.ulPage li.selected a, ul.ulPage li.selected a:hover,  ul.ulPage li.unable a, ul.ulPage li.unable a:hover {
+	color: #ffffff;
+	text-decoration: none;
+}
+ul.ulPage li input.page_input {
+	width: 25px;
+	text-align: center;
+}
+/**当前位置*/
+.cur_position {
+	height: 36px;
+	line-height: 36px;
+	border: 1px solid #CCC;
+	border-bottom-color: #999;
+	padding-left: 10px;
+	margin-bottom: 10px;
+	background-color: #fbfbfb;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#fefefe), to(#e7e7e7));
+	background-image: -webkit-linear-gradient(top, #fefefe, #e7e7e7);
+	background-image: -moz-linear-gradient(top, #fefefe, #e7e7e7);
+	background-image: -o-linear-gradient(top, #fefefe, #e7e7e7);
+	background-image: linear-gradient(to bottom, #fefefe, #e7e7e7);
+ filter: progid:DXImageTransform.Microsoft.gradient(startColorStr = #fefefe, EndColorStr = #e7e7e7);
+}
+/**快说查询区域**/
+.chooseDiv {
+	border: 1px solid #CCC;
+	height: 40px;
+	line-height: 40px;
+	*line-height: 45px;
+	margin-top: 10px;
+	background-color: #E5F2F8;
+	border-top: 2px solid #0556A0;
+}
+.chooseDiv_table {
+	margin-left: 110px;
+}
+.chooseDiv_table a img{
+	margin-top: -4px;
+	margin-right: 5px;	
+}
+.chooseDiv_table input,.chooseDiv_table label{
+	cursor:pointer;
+}
+.choose_selector {
+	height: 22px;
+	line-height: 22px;
+	margin: 8px 0 0 15px;
+	padding: 0 21px 0 5px;
+	border: 1px solid #CECBCE;
+	background: white;
+	float: left;
+	display: inline;
+	position: relative;
+	z-index:1;
+	cursor: pointer;
+}
+.choose_selector span.iconDiv {
+	height: 22px;
+	width: 16px;
+	display: block;
+	border-left: 1px solid #CECBCE;
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+.choose_selector span.icon {
+	width: 16px;
+	height: 16px;
+	background: url(http://t1.chsi.com.cn/common/jqueryui/1.8.11/themes/smoothness/images/ui-icons_222222_256x240.png) no-repeat -64px 0;
+	display: block;
+	position: absolute;
+	right: 0;
+	top: 4px;
+}
+.choose_selector_sub {
+	background: #FFFFFF;
+	border: 1px solid #CECBCE;
+	position: absolute;
+	width: 300px;
+	padding: 6px 10px;
+	position: absolute;
+	top: 22px;
+	left: -1px;
+	z-index:9;
+	cursor: default;
+	box-shadow: 2px 2px 2px #CCCCCC;
+	display: none;
+}
+.choose_selector_sub a {
+	margin: 4px;
+	float: left;
+	display: inline;
+	line-height: 14px;
+	padding: 1px;
+	white-space: nowrap;
+}
+
+.choose_selector_sub a:hover {
+	color: #FFFFFF !important;
+	background: #1B6EC2;
+	text-decoration: none;
+}
+.choose_selector_sub a.selected {
+	color: #FFFFFF !important;
+	background: #1B6EC2;
+}
+.red {
+	color: #CA2654;
+	padding: 0 2px;
+}
+.text_left {
+	text-align: left;
+}
+.text_center {
+	text-align: center;
+	padding:0;
+}
+.text_right {
+	text-align: right;
+}
+.text_justify {
+	text-align: justify;
+}
+.m_top10 {
+	margin-top: 10px;
+}
+.m_bottom10 {
+	margin-bottom: 10px;
+}
+/**下划线**/
+.line {
+	border-bottom: 2px solid #0556A0;
+	margin-bottom: 15px;
+	padding: 5px;
+}
+.ui-box {
+	border: 1px solid #E9E7E7;
+	-webkit-border-radius: 4px;
+	border-radius: 4px;
+	background-clip: padding-box;
+	-webkit-box-shadow: 1px 1px 2px 1px #EEECEC;
+	box-shadow: 1px 1px 2px 1px #EEECEC;
+}

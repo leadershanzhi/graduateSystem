@@ -1,0 +1,181 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>注册界面</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" type="text/css" href='/css/a.css'/>
+<link rel="stylesheet" type="text/css" href='/css/b.css'/>
+<link rel="stylesheet" type="text/css" href='/css/c.css'/>
+<script src="/js/name.js"></script>
+
+<script type="text/javascript">
+    function remove(){
+        var info=document.getElementById("txtHint").innerText;   
+        if(info.trim()=='已被注册'){
+           document.f.id.value="";
+        }          
+    }
+
+    function checkpw(){
+        if(document.f.pw.value!==document.f.pwx.value){
+           alert("新密码需与原密码一致");
+           document.f.pwx.value="";
+        }
+    }
+
+</script>
+
+<style type="text/css">
+#head_wrap {
+    clear: both;
+	background:#fff;
+    font: 12px/1.5 '微软雅黑','宋体',Arial,Helvetica,sans-serif;
+    margin: 0 auto;
+    padding: 0 10px;
+    width: 950px;
+}
+#head_wrap h1 {
+    background: url("/images/logologinn.png") no-repeat scroll 0 25px transparent;
+    color: #FFFFFF;
+    font-size: 1px;
+    height: 76px;
+    line-height: 160px;
+    overflow: hidden;
+    position: relative;
+    width: 536px;
+}
+#head_wrap h1 a {
+    display: block;
+    height: 76px;
+    left: 0;
+    line-height: 76px;
+    position: absolute;
+    top: 0;
+    width: 536px;
+}
+#head_wrap h1 a:hover {
+    text-decoration: none;
+}
+</style>
+</head> 
+<body>
+<div id="head_wrap">
+  <h1>推免系统<a href="/">&nbsp;</a></h1>
+</div>
+
+<div id="content" class="container_24 clearfix">
+  <div class="clearfix" id="user_box">
+    <div class="user-bh">
+      <h2>用户注册</h2>
+    </div>
+    <div class="user-bd">
+      
+      <div class="register_form" align="center">
+       <form name="f" method="post" action="/student/addstu">  
+        <table width="80%" border="1" cellspacing="1" cellpadding="4" align="center">
+          <tbody>
+          <tr><td colspan="2"></td></tr>
+            <tr>
+              <td width="21%" class="text_right"><font color="#ff0000">*</font>用户名：</td>
+              <td width="79%" align="left"><input type="text" name="name" required="required" placeholder="用户名不能为空"  title="不可为空" maxlength="14" size="30" class="bbsInput_short">
+                 </td>
+            </tr>
+			
+			<tr>
+              <td width="21%" class="text_right"><font color="#ff0000">*</font>身份号：</td>
+              <td width="79%" align="left"><input type="text" name="id" onkeyup="showHint(this.value)"  maxlength="14" size="30" value="" pattern="^[0-9]{9}$" class="bbsInput_short" title="身份号只能由9位数字组成组成且必须唯一">
+              &nbsp;&nbsp;<span style="color:#ff0000;" id="txtHint">
+                </span>
+              </td>
+            </tr>
+           
+            <tr >
+              <td class="text_right">我的生日： </td>
+              <td align="left"><font color="#9A1C4C">
+                <input type="date"  maxlength="30" size="12" value="" class="bbsInput_short">
+                </font></td>
+            </tr>
+            <tr>
+              <td class="text_right"><font color="#ff0000">*</font>密码：</td>
+              <td align="left"><input type="password" name="pw" required="required" onfocus="remove()" pattern="^[a-zA-Z0-9]{4,8}$" title="密码由4至8位的字母或数字组成" maxlength="14" size="14" class="bbsInput_short">
+               
+            </tr>
+            <tr >
+              <td class="text_right"><font color="#ff0000">*</font>确认密码：</td>
+              <td align="left"><input type="password" name="pwx" required="required" onChange="checkpw()" title="需与原密码一致" value="" size="14" maxlength="14" name="repassword" class="bbsInput_short" >
+                </td>
+            </tr>
+			<tr>
+              <td class="text_right"><font color="#ff0000">*</font>所在学校： </td>
+              <td align="left"><font color="#9A1C4C">
+                <select name="scid"><option>长春大学</option>
+					<option>吉林大学</option>
+					<option>东北电力大学</option>
+					<option>东北财经大学</option>
+					<option>延边大学</option>
+					<option>长春师范大学</option>
+					<option>长春理工大学</option>
+					<option>东北师范大学</option>
+					<option>长春工业大学</option>		
+					</select>
+                </font>  &nbsp;&nbsp;<span style="color:#ff0000;">注册成功后，不能修改</td>
+            </tr>
+
+            <tr>
+              <td class="text_right"><font color="#ff0000">*</font>德育成绩：</td>
+              <td align="left"><input type="text" name="dyscore" maxlength="4" size="4" pattern="^[1-9][0-9]$" title="分数为1至100" class="bbsInput_short">
+               </td>
+            </tr>
+			
+			<tr>
+              <td class="text_right"><font color="#ff0000">*</font>智育成绩：</td>
+              <td align="left"><input type="text" name="zyscore" maxlength="4" size="4" pattern="^[1-9][0-9]$" title="分数为1至100" class="bbsInput_short">
+               </td>
+            </tr>
+            
+           
+            <tr >
+              <td class="text_right">联系电话： </td>
+              <td align="left"><font color="#9A1C4C">
+                <input type="text" name="phone" maxlength="30" size="12" value="" class="bbsInput_short">
+                </font></td>
+            </tr>
+           
+            <tr >
+              <td class="text_right"><font color="#ff0000">*</font>电子邮件：</td>
+              <td align="left"><input type="email" name="mail" title="注意格式：比如shanzhi@sina.com" required="required" maxlength="50" size="30" value="" class="bbsInput_short">
+                &nbsp;&nbsp;<span style="color:#ff0000;"><br>
+                </span></td>
+            </tr>
+            
+            <tr >
+              <td height="40" colspan="4"><div align="center">
+                  <input type="submit" value="注 册" class="buttonDeep">
+                      &nbsp;&nbsp; 
+                  <input type="reset" value="清 除" class="buttonSel">
+                      &nbsp;&nbsp; 
+				  <input type="reset" value="返 回" onClick="history.back(-1);" class="buttonSel">
+                </div></td>
+            </tr>
+            
+          </tbody>
+        </table>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+<hr/>
+<div align=center>
+<iframe width="950" height="93" src="/index/foot" scrolling="no" frameborder="0"></iframe>
+</div>
+
+
+</body>
+</html>

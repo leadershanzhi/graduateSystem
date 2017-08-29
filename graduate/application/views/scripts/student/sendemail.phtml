@@ -1,0 +1,131 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+		<meta http-equiv="content-type" content="text/html;charset=utf-8"/>
+</head>
+<title>用户登录</title>
+<link rel="stylesheet" type="text/css" href='/css/a.css'/>
+<link rel="stylesheet" type="text/css" href='/css/b.css'/>
+<link rel="stylesheet" type="text/css" href='/css/c.css'/>
+
+<script type="text/javascript">
+ function send(){
+	 document.forms["myform"].submit();
+ }
+ function refresh_code()
+ {
+	 form1.imgcode.src="/php/verifycode.php?a="+Math.random();
+ }
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-100524-7']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+<body>
+
+<style type="text/css">
+#head_wrap {
+    clear: both;
+	background:#fff;
+    font: 12px/1.5 '微软雅黑','宋体',Arial,Helvetica,sans-serif;
+    margin: 0 auto;
+    padding: 0 10px;
+    width: 950px;
+}
+#head_wrap h1 {
+    background: url("/images/logologinn.png") no-repeat scroll 0 25px transparent;
+    color: #FFFFFF;
+    font-size: 1px;
+    height: 76px;
+    line-height: 160px;
+    overflow: hidden;
+    position: relative;
+    width: 536px;
+}
+#head_wrap h1 a {
+    display: block;
+    height: 76px;
+    left: 0;
+    line-height: 76px;
+    position: absolute;
+    top: 0;
+    width: 536px;
+}
+#head_wrap h1 a:hover {
+    text-decoration: none;
+}
+</style>
+<div id="head_wrap">
+  <h1>中国研究生招生信息网<a href="/">&nbsp;</a></h1>
+</div>
+  <div id="content" class="container_24 clearfix">
+  <div class="clearfix" id="user_box">
+  <div class="user-bh"><h2>找回密码</h2></div>
+  <!-- 22222222222222222222222222222222222222222222222222222222 -->
+     <div class="resetpwd">
+     <h3>3.找回密码-确定发送到此邮箱</h3>
+     </div>
+<br />
+<br />
+<?php 
+  $pw=$this->pw;
+  $mail=$this->mail;
+  $id=$this->id;
+
+?>
+<table width="450" border="0" cellpadding="0" cellspacing="1" bgcolor="#E1E1E1" align="center" style="margin:0 auto">
+            <!--DWLayoutTable-->
+            <tr align="center" bgcolor="#FFFFFF">
+              <td height="26" bgcolor="#F6F7F8" style="font-size:14px;"> ..:: 找 回 密 码 ::..</td>
+            </tr>
+            <tr  bgcolor="#00ffff">
+              <td>
+              <form action="../php/send.php" method="post" id="myform">
+                <table width="100%" border="0" >
+                  <input type="hidden" name="pw" value="<?php echo $pw?>"/>
+                  <input type="hidden" name="mail" value="<?php echo $mail?>"/>
+                  <input type="hidden" name="id" value="<?php echo $id?>"/>
+                  <tr>
+                    <td colspan="2" height="40" align="center"><?php echo $this->id?>为了安全起见，系统将会初始化您的密码，点击确认后，将密码发送至邮箱：<font color="#990000"><?php echo $mail?></font> 中，请及时查收。</td>
+                  </tr>
+                  <tr>
+                    <td colspan="2" height="25" align="center"><a href="javascript:send()" >确定发送</a> or <a href="/index/index">返回首页</a></td>
+                  </tr>
+                  <tr>
+                    <td height="1"></td>
+                    <td height="1"></td>
+                  </tr>
+                  
+              </table></form></td>
+            </tr>
+          </table>
+<br />
+<br />
+<br />
+<br />
+</div>
+     
+  <!-- 2222222222222222222222222222222222222222222222222222222222 -->
+  
+  <!-- 1111111111111111111111111111111111111111111111111111111111 -->
+  </div>
+  </div>
+  </div>
+  
+
+
+<hr/>
+<div align=center>
+<iframe width="950" height="93" src="/index/foot" scrolling="no" frameborder="0"></iframe>
+</div>
+
+
+</body>
+</html>

@@ -1,0 +1,213 @@
+
+<!DOCTYPE HTML>
+<html>
+<?php 
+require_once APPLICATION_PATH.'/models/Response.php';
+$resp=new Response();
+$new=$this->res;
+$newid=$new['id'];
+$scpic=$this->scpic;
+$scid=$this->scid;
+$scname=$this->scname;
+?>
+<head>
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title><?php echo $new['title']?></title>
+<script>
+
+function show(){
+    var x=document.getElementById("ta");
+    x.style.display="block";
+}
+function hide(){
+    var x=document.getElementById("ta");
+    x.style.display="none";
+}
+
+
+  function change1(){
+	
+  var x=document.getElementById('ch1');
+  x.rows="2";
+  var x=document.getElementById('ch2');
+  x.style.display="block";
+  }
+
+  function change2(){
+     var s=document.getElementById('ch1');
+	 s.rows="1";
+	 var x=document.getElementById('ch2');
+	 x.style.display="none";
+  }
+
+
+</script>
+
+<style type="text/css">
+<!--
+.hf{border:none;background:url(/images/liuyan1.jpg);  left top no-repeat;width:70px; height:25px; }
+.hf1{border:none;background:url(/images/sayfb.jpg);  left top no-repeat;width:54px; height:21px; }
+a { text-decoration: none}
+a:hover { text-decoration:underline;color:#666666}
+.areastyle 
+{ border:1px solid #F90; overflow:auto; background:#fff url(/images/sygb.jpg) right bottom no-repeat;color:#03C;font-size:14px}
+.areastyle1
+{ border:1px solid #F90; overflow:auto; background:#fff  right bottom no-repeat;color:#03C;font-size:14px}
+.STYLE3 {font-size: 12px}
+.STYLE4 {color: #0033FF ;font-size: 12px}
+.STYLE5 {font-size: 10px}
+.STYLE6 {
+	font-family: "幼圆";
+	color: #CC6600;
+	font-size: 13px;
+}
+-->
+</style>
+</head>
+
+<body  background="/images/logebg1.jpg">
+   <!--整体表格-->
+   <table width="100%" height="220" border="0" align="center" cellpadding="0" cellspacing="0" bgcolor="#FFFFFF">
+     <tr ><td align=center><hr ></td></tr>
+     <tr><td align=center><strong><?php echo $new['title'];?></strong><br/></td></tr>
+     <tr ><td align=center><hr ></td></tr>
+     <tr><td><?php echo $new['content'];?></td></tr>
+     <tr ><td align=center><hr ></td></tr>
+     <tr>
+       <td valign="top"><img src="/images/saylogoo.jpg" width="100%" height="24" />
+         <table width="100%" height="175"  border="0" cellpadding="0" cellspacing="0">
+             <tr>
+               <td width="100%" height="173" valign="top"><table width="100%" height="66" border="0" cellpadding="0" cellspacing="0">
+                   
+                   <tr>
+                     <td height="29">
+                     <?php $i=1;$j=10000;?>
+                     <?php foreach ($this->reviews as $item){
+							$id=$item['id'];	
+							$name=$item['name'];	
+							$pic=$item['pic'];	
+							$stuid=$item['stuid'];	
+							$t=$item['t'];	
+							$content=$item['content'];	
+							$ques=$item['ques'];
+							$i=$i+1000;
+							$i1=$i;
+                            $i2=$i+200;     
+                     echo "
+                         <table width=100% border=0 cellspacing=0 cellpadding=0>
+         
+                         <!--正文-->
+                           <tr>
+                             <td width=13% height=79 valign=top align=center><img src=/upload/$pic width=75 height=70 /></td>
+                             <td width=87%>
+                                 <table width=99% border=0 cellspacing=0 cellpadding=0 background=/images/bgmain.jpg>
+                                   <tr>
+                                     <td>
+									 
+									   <table width=100% border=0 cellspacing=0 cellpadding=0>
+                                         <tr >
+                                           <td width=17% height=22><span class=STYLE4>$stuid&nbsp;$name</span></td>
+                                           <td width=60% align=center>
+										         <span class=STYLE5>$t</span>										                                            </td>
+										   <td width=23%>
+									
+                                      </tr>
+                                     </table></td>
+                                   </tr>
+                                   <tr>
+                                     <td ><span class=STYLE3><br/>
+                                       $content
+                                    </span></td>
+                                   </tr>
+                                   <tr>
+                                     <td><hr width=98% color=#ffffff size=4 align=left /></td>
+                                   </tr>
+                                   <tr>
+                                     <td>";
+									   
+									   $r=$resp->getResponse($id);
+									   foreach ($r as $item){
+									       $reid=$item['id'];
+									       $time=$item['time'];
+									       $con=$item['content'];
+                                        echo" <table width=100% border=0 cellspacing=0 cellpadding=0>
+                                            <tr>
+                                             <td width=12% rowspan=2 align=left><img src=/upload/$scpic width=65 height=50 /></td>
+                                             <td width=65%>
+											      <span class=STYLE4>$scid&nbsp;&nbsp;$scname</span>&nbsp;&nbsp;&nbsp;&nbsp;<span class=STYLE5>$time</span>&nbsp;&nbsp;&nbsp;&nbsp;										     </td>
+							                  <td width=>";
+							                  if(empty($this->tag)){
+							                  echo "<a href='/response/del?id=$reid&newid=$newid'><font size=-1>删除</font></a>";
+											     } 
+											      
+											      echo "</td>
+                                            </tr>
+										   <tr>
+										      <td><span class=STYLE3>回复：$con</span></td>
+                                           </tr>
+                                           <tr>
+                                             <td>&nbsp;</td>
+                                             <td colspan=2>&nbsp;								 </td>
+                                           </tr>
+                                           <tr>
+                                             <td colspan=3><hr width=100% color=white height=1 align=center size=1/></td>
+                                           </tr>
+                                         </table>";
+										 
+									   }
+										 
+										 
+                                                   echo   "</td>
+                                   </tr>";
+                                   
+                                                   if(empty($this->tag)){
+                                    echo "
+								    <form action=/response/add method=post>
+								    
+                                   <tr>
+                                     <td>
+                                       <textarea cols=40 rows=2 name=con  required=required></textarea>
+                                       <input type=hidden name=rvid value=$id>
+                                       <input type=hidden name=newid value=$newid>
+                                     </td>
+                                   </tr>
+                                   <tr>
+                                     <td><div >
+                                       <input  type=submit class=hf1 value=>
+                                     <a href=javascript:void(0) class=STYLE3 >取消</a></div></td>
+                                   </tr>
+								    </form>";}
+								   
+								   echo "
+								   <tr>
+								     <td bgcolor=#FFFFFF>&nbsp;</td>
+								   </tr>
+                                 </table>
+								
+                             
+                             
+							 
+							 </td>
+                           </tr>
+                           <!--正文-->
+                  
+                           
+                         </table>";
+
+                      
+                     }?>
+                     </td>
+                   </tr>
+               </table></td>
+               <td width="25%" ><img src="/images/sayborder.jpg" width="100%" height="100%" /></td>
+             </tr>
+         </table></td>
+     </tr>
+   </table>
+   <!--整体表格-->
+</body>
+</html>
+
+

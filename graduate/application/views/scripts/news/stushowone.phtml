@@ -1,0 +1,469 @@
+<!DOCTYPE HTML>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>
+	吉林省_计算机类_研究生推免信息
+</title>
+<meta name="robots" content="all" />
+
+<link rel='stylesheet' type='text/css' href='/css/aa.css'/>
+<link rel='stylesheet' type='text/css' href='/css/bb.css'/>
+<link rel='stylesheet' type='text/css' href='/css/cc.css'/>
+<script type="text/javascript" src='/js/jquery.js'></script>
+<script type="text/javascript">
+$(function(){
+	//js优化，页面click事件绑定  huanghui@2013.08.26
+ 	$(window.document).bind('click',function(e){		
+		var $target = $((e||window.event).target);
+		if($target.hasClass('more_time')){//“详细”
+			var $ul = $target.parent('span.one_time').next('ul.opentime');
+			if($ul.length!=0){
+				$('ul.opentime').css('display','none');
+				$ul.css('display','block');
+			}	
+			return false;		
+		}else if($target.hasClass('close_time')){//“关闭”
+			$('ul.opentime').css('display','none');
+			return false;
+		}else if($target.hasClass('question_t_txt')){//问题回复的隐藏和显示
+			$target.parents("tr").next("tr").toggle();
+			return false;
+		}else if ($target.attr('id')=='allShow'){//“全部展开”
+			var $q_tr = $(".question_cnt_tr");
+			var text = $target.text();
+			if(text=='全部展开'){
+				$target.text('全部收起');
+				$q_tr.show();
+			}else if(text=='全部收起'){
+				$target.text('全部展开');
+				$q_tr.hide();
+			}
+			return false;
+		}			
+	});	
+})
+</script>
+
+</head>
+
+<body>
+
+
+
+
+<style type="text/css">
+html,body{ margin:0; padding:0;}
+/*topNav layout*/
+#nav_top{ font:12px/1.5 '\5FAE\8F6F\96C5\9ED1','\5B8B\4F53', Arial, Helvetica, sans-serif; background: url("http://t1.chsi.cn/yz/images/base/nav_top_bg.png") repeat-x left top; text-align:left;  border-bottom:solid 1px #c7c7c7; }
+
+.topNav{ height:35px; line-height:35px; font-size:12px; background:#367bb9;  margin-bottom:10px; }
+
+.topNav950{ margin:0 auto; width:950px; text-align:left; clear:both;}
+.topNav_l{ float:left; width:800px; height:35px; overflow:hidden; line-height:35px;}
+.topNav_l a { float: left;    padding: 0 8px;	display:inline;  }
+.topNav_l a:link, .topNav_l a:visited { color:#333;  text-decoration: none;}
+.topNav_l a:hover {   text-decoration:underline;}
+.topNav_r {display: inline;    float: right;    position: relative;    width: 150px;   z-index: 999;}
+
+/*LoginAfter*/
+#yz_NavLoginAfter{  position:relative; z-index:10; float:right;}
+#yz_NavLoginAfter .userInfo-wrap{ background-color: #5195D2;  border: 1px solid #4E88AF;   box-shadow: 0 3px 2px 0 #6298C9; color:#fff; font-size: 12px;  padding: 0px 10px 0px 15px;  margin-right:0px; display:inline; height:33px; line-height:33px; float:left; width:108px; text-align:left; text-indent:15px; }
+#yz_NavLoginAfter .userInfo-wrap a{ display:block; width:108px; overflow:hidden; text-overflow: ellipsis;white-space: nowrap; max-width:108px; color:#FFF; font-weight:bold; }
+#yz_NavLoginAfter .userInfo-wrap after{content:"...";}
+#yz_NavLoginAfter ul, #yz_NavLoginAfter li{ list-style:none; margin:0px; padding:0px;}
+#yz_logined{ position:relative; height:33px; }
+#yz_suggest_wrap{ position:absolute; top:40px; z-index:1000; width:130px;  right:0px; background:#fff; border:solid #ddd 1px; padding:10px 0px; margin:0px;}
+#yz_suggest_wrap li{ margin:0px; padding:0px; color:#333;   height: 29px; line-height: 29px;    }
+#yz_suggest_wrap li span {    border-bottom: 1px dashed #DCDDDD;    display: block;	width: 110px;	margin:0 10px;	overflow:hidden;}
+#yz_suggest_wrap li a{ display:block; margin:0px; padding:0px; cursor:pointer;}
+#yz_suggest_wrap li a:hover{ background:#F2F2F2; font-weight:bold; color:#333; }
+.ntes-nav-select-arr {	font-family:Verdana;    display:block;	position: absolute;    left: 15px;    top: 18px;	width:0px;	height:0px;	overflow:hidden;	border:4px solid #5195D2;	border-width:4px 4px 0px 4px;	border-color:#fff #5195D2; }
+.ntes-nav-select-unfold .ntes-nav-select-arr{  	transform: rotate(180deg);    transition: all 0.25s ease 0s;}
+
+/*LoginBefore*/	
+#yz_NavLoginBefore{ float:right;  position:relative; z-index:10; }
+#yz_NavLogin a{ float:left; margin-right:15px; display:block; height:34px;  line-height:34px; color:#333;}
+#yz_NavLogin a.loginIn {  background-color: #5195D2;  border: 1px solid #4E88AF;   box-shadow: 0 3px 2px 0 #6298C9; font-size: 12px;    padding: 0 15px; color:#FFF;}
+#yz_NavLogin a.loginIn:hover{ text-decoration:none;}
+#yz_login_wrap{ background:#fff; padding:5px 20px; position:absolute; z-index:999; top:39px; z-index:1000; right:0px;   border:1px solid #CDCDCD; box-shadow: 8px #CDCDCD}
+#yz_login_wrap table{ width:230px; border:0; color:#333; margin:0px;}
+#yz_login_wrap table td{  vertical-align:middle; padding:5px 0; }
+#yz_login_wrap  hr{ border:none; border-bottom:solid 1px #ccc; height:0px; margin:0px 0px 10px 0px; }
+#errormsg{color:#F00; padding-bottom:5px; line-height:16px; margin:0px;}
+#loginBefore_link{ margin:0px; padding:0px; line-height:28px; }
+#yz_login_wrap tr.login-hd td{ padding:0px; height:30px; line-height:30px;}
+#yz_login_wrap tr.login-hd a{ color:#5c85ad; margin-right:0px; display:inline; float:none;}
+
+#yz_loginframe_username{ background:url(http://t3.chsi.cn/yz/images/base/login_icon.png) no-repeat 5px 7px; line-height:30px; width:195px; height:30px; font-size:12px; padding-left:30px; padding-right:5px; border: 1px solid #CCCCCC; }
+#yz_loginframe_password{ background:url(http://t3.chsi.cn/yz/images/base/login_icon.png) no-repeat 5px -33px; line-height:30px; width:195px; height:30px; padding-left:30px; padding-right:5px; border: 1px solid #CCCCCC;}
+#yz_loginframe_authcode{   width:90px; height:30px; padding-left:3px; line-height:30px; border: 1px solid #CCCCCC;}
+#nav_top p.bread_nav{ line-height:38px; height:38px;}
+.yz_loginframe_btn{    background-color: #5195D2;	 background-image: -moz-linear-gradient(center top , #5ea2df, #72a2ce);      border: 1px solid #4E88AF;    color: #FFFFFF;    cursor: pointer;    float: left;    font-size: 14px;    font-weight: bold;    height: 34px;    width: 230px;	}
+.yz_loginframe_btn:hover {    background-color: #6298C9; background-image: -moz-linear-gradient(center top , #5195D2, #6298C9);    border: 1px solid #6298C9;}
+.topNav input[type="text"], .topNav input[type="password"] {	resize: none;    border: 1px solid #CCCCCC;    border-radius: 3px 3px 3px 3px;    color: #555555;
+    display: inline-block;    font-size: 12px;    padding-left: 3px;    vertical-align: middle;}
+#nav_top input[type="text"]:hover,#nav_top input[type="password"]:hover {    border-color: rgba(82, 168, 236, 0.8);    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1) inset, 0 0 8px rgba(82, 168, 236, 0.6);    outline: 0 none;}
+
+
+</style>
+
+
+
+
+
+<div class="topNav" id="nav_top">
+<div class="topNav950">
+    <div class="topNav_l"><a href="/">首页</a><a href="/kyzx/zcdh/" target="_self">政策</a><a href="/kyinfo/" target="_self">资讯</a><a href="/sch/" target="_self">院校信息</a><a href="/zyk/" target="_self">专业知识库</a></div>
+    <div class="topNav_r">
+    <div class="nav">
+    
+    
+    
+    
+
+
+
+
+
+
+<?php 
+         session_start();
+         require_once APPLICATION_PATH.'/models/Response.php';
+         $resp=new Response();
+		 $name=$_SESSION['loginuser']['name'];
+?>
+<div id="yz_NavLoginAfter"  style="display:block">
+  <div tabindex="0"   id="yz_logined">
+      <span class="userInfo-wrap"><a href="/user/" id="user_info_name"><?php echo $name?></a><em class="ntes-nav-select-arr"></em></span>
+      <div  id="yz_suggest_wrap" style="display:none">
+            <ul class="clearfix" id="yz_logined_suggest">
+            <li><a href="/student/stuenter" ><span>返回主页面</span></a></li>       
+            <li><a href="/global/exit"><span>安全退出</span></a></li>
+            </ul>
+        </div>
+    </div> 
+</div>
+
+
+    
+    
+    </div>
+    </div>
+  </div>
+</div>
+
+
+<script type="text/javascript">
+$("#nav_top").ready(function(){		
+  $("#yz_login_a").live("mouseenter",function(){$("#yz_login_wrap").toggle(true); })
+  $("#yz_login_a").live("click",function(){$("#yz_login_wrap").toggle(); return false; })
+  $("#yz_logined").live("mouseenter",function(){$(this).addClass("ntes-nav-select-unfold"); $("#yz_suggest_wrap").show();}); 
+  $("#yz_suggest_wrap").live("mouseenter",function(){$("#yz_logined").data("flg",true); })
+  $("#yz_suggest_wrap").live("mouseleave",function(){$("#yz_logined").removeClass("ntes-nav-select-unfold"); $(this).hide(); $("#yz_logined").data("flg",false);})
+/*
+ $("#yz_login_wrap").live("mouseleave",function(){setTimeout(function(){ $("#yz_login_wrap").toggle(false);},400); })
+ */
+  $("#yz_logined").live("mouseleave",function(){
+	if($("#yz_suggest_wrap").get(0).style.display=="none"){ return;}
+	setTimeout(function(){ if(!!!$("#yz_logined").data('flg')){$("#yz_logined").removeClass("ntes-nav-select-unfold"); $("#yz_suggest_wrap").hide();} },400)									  			 })
+  
+	$("#yz_navLogout").live("click",function(){
+		$.post("/user/logout.do",{random:Math.random()*10000},function(){
+			$(".nav").load("/common/nav_login.jsp",function(){
+				window.location.reload();
+			});
+			
+		})
+		return false;
+	});
+	
+	
+	
+
+
+	$("#yz_login_wrap :input[type!='button']").live("blur",function(){
+		if($.trim($(this).val())==""){
+			$(this).css({"border-color":"#FFB5B5","background-color":"#FFEEEE"});
+		}else{
+			$(this).css({"border-color":"#CCCCCC","background-color":"#fff"});
+		}
+	});
+	
+  
+});
+
+
+
+</script>
+
+
+
+<div class="container_24 clearfix">
+  <div class="grid_24 clearfix"> <img align="middle" alt="吉林省_计算机类_研究生推免信息" src='/images/znews.png' title='吉林省_计算机类_研究生推免信息' /> </div>
+  
+    
+
+
+
+
+
+
+<div class="grid_24 clearfix">
+  <div class="cur_position">当前位置：<a  href="#">高校研究生推免管理</a> &gt;  通知留言</div>
+   
+  
+<style type='text/css'>
+.opentime{
+	top:20px;
+	left: -4px;
+	margin-left: 411px;
+	_margin-left: 80px;
+	
+}
+</style>
+</div>
+
+  
+  <div class='grid_24 clearfix'>
+    
+
+
+
+
+
+<div class="tabs">
+  <ul>
+    
+      <li id="tlq3" class="onli">具体通知的评论</li> 
+  </ul>
+  
+  <div class='zxzx_search'>
+
+
+  </div>
+  <div class='clear'></div>
+</div>
+
+<div class='question_table'>
+
+<?php $new=$this->new;?>
+<!--通知遍历-->
+<div class="sqBody" >
+  
+    <h5 class="text_center"><?php echo $new['title']?></h5>
+	
+    <table class='tablePro' >
+       
+        <tr>
+        	
+            <td >
+			    <!--消息遍历的内容--><div align="center">
+				    
+			        <table width="80%" border="1">
+ <?php $id=$new['id'];?>
+  <tr>
+    <td >发布者：<?php echo $new['issuer']?></td>
+    <td >发布时间：<?php echo $new['time']?></td>
+  </tr>
+  <tr>
+    <td colspan=2><hr/></td>
+  </tr>
+  <tr>
+    <td colspan=2><?php echo $new['content']?></td>
+  </tr>
+  <tr>
+    <td colspan=2><hr/></td>
+  </tr>
+</table>
+
+					
+					
+			   </div> <!--消息遍历的内容-->
+			</td>
+        </tr>
+    </table>
+
+  
+  
+</div>
+<br />
+
+    <div class='clear'></div>
+
+
+
+<!--通知遍历-->
+  <table class='tablePro tableBordered '>
+    <thead>
+      <tr>
+        <th width="70">楼数</th>
+        <th>问题</td>
+        <th width="100">评论者</th>
+        <th width="160">时间</th>
+        <th style='width:15px;border-left:0;'>&nbsp;</th>
+      </tr>
+    </thead>
+    <tbody>
+  <tr>
+     <td colspan="5"  class="cut_line" style='background-color: #F7F8F8;'>
+    	 <div class="showAll" style='float:none;margin:0;text-align: center;'>  | <a href="###" id="allShow" >全部展开</a> |
+        </div>
+     </td>
+  </tr> 
+  <?php 
+ 
+	  $pnow=$this->pagebean->pnow;
+	  $pcount=$this->pagebean->pcount;
+	  $rcount=$this->pagebean->rcount;
+	  $psize=$this->pagebean->psize;
+      $i=($pnow-1)*$psize;?>   
+<?php foreach ($this->review as $item){
+	$i++;
+	$rvid=$item['rvid'];
+	
+	echo "
+  <tr>
+    <td class=text_center>".$i."楼</td>
+    <td class='question_t'><a href=### class=question_t_txt>
+      ".$item['ques']."
+      </a></td>
+    <td class='question_t'><a href=# target=>".$item['stuname']."</a>
+      </td>
+    <td class=question_t text_center>
+    ".$item['t']."</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr class=question_cnt_tr>
+    <td>&nbsp;</td>
+    <td colspan=3>
+     <div class=question_cnt style=width:830px;>
+        <div class=question_cnt_arrow_n>&nbsp;</div>
+        <div><span class='red'>【详情】</span>".$item['content']."</div>";
+	$r=$resp->getResponse($rvid);
+	foreach ($r as $it){
+	       
+	     echo "<div><span class=red>【回复】</span><span class=blue>".$it['time']."</span>&nbsp;&nbsp;".$it['content']."</div>";	
+    }					   
+									 
+  }?>
+
+
+    </tbody>
+  </table>
+</div>
+<div class="pageDiv">
+  
+
+
+
+
+<script language="javascript" type="text/javascript">
+String.prototype.strip = function(){
+        return this.replace(/^\s+/, '').replace(/\s+$/, '');
+}
+function listener_key_(eventTag){
+    var event = eventTag||window.event;
+    var currentKey = event.charCode||event.keyCode;
+    if(currentKey==13){
+		var p = document.getElementById("page_tnum");
+		if(!p || p.value.strip()==""){
+		    return;
+		}
+        document.getElementById("pager_go_to").focus();
+    }
+}
+</script>
+
+
+
+
+<form method="post" name="PageForm" id="PageForm" >
+<ul class="ulPage">
+ <li class="lip">共<?php echo $rcount?>条记录</li>
+ <li class="lip">第<?php echo $pnow?>/<?php echo $pcount?>页</li>
+  <li class="lip"><a href="/news/stushowone?now=1&id=<?php echo $id?>">首页</a></li>
+  <?php 
+	if($pnow>1){
+		$pchange=$pnow-1;
+		echo "<li class=lip><a href='/news/stushowone?id=$id&now=$pchange'>上一页</a></li>";
+    }?>
+  	<?php  
+		if($this->pagebean->pnow<$this->pagebean->pcount){
+			$pchange=$pnow+1;
+			echo "<li class=lip><a href='/news/stushowone?id=$id&now=$pchange'>下一页</a></li>";
+		}
+	?>
+  	   
+  	    
+  <li class="lip"><a href='/news/stushowone?id=<?php echo $id?>&now=<?php echo $pcount?>'>末页</a></li>
+  <li>
+    <input type="text" class='page_input' value="<?php echo $pnow?>" name="page">
+  </li>
+  <li><input type="button" value="GO" class='buttonSel' onclick="go()"></li>
+</ul>
+</form>
+<script type="text/javascript">
+	function go(){
+		var pn=document.PageForm.page.value;
+		var Num = parseInt(pn);
+		if(isNaN(Num)){
+			alert("请输入有效的数字");
+		}
+		else if (Num > <?php echo $pcount?>) {
+			alert("没有那么多页");
+		}
+		else if (Num < 1) {
+			alert("请输入有效的数字");
+		}else{
+		window.location.href="/news/stushowone?id=<?php echo $id?>&now="+Num; }
+	}
+
+</script>
+
+
+<!--回复模块-->
+</div>
+
+    <div class='clear'></div>
+    
+    <div class="newQuestion" id='newQuestion'>
+        <div class='twzx'>
+  <h6>留言板块</h6>
+  <form action="/review/addreview" method="post" name="question" target="_self" >
+  <input type="hidden" name="newid" value="<?php echo $new['id']?>" />
+  <table>
+    <tr>
+      <td class='firstTd'><span class='red'>*</span>问题：</td>
+      <td><input type='text'  name="ques"  required="required" maxlength="10"/>
+        <span class='grey'>（最多输入10个字）</span></td>
+    </tr>
+    <tr>
+      <td class='firstTd'><span class='red'>*</span>内容：</td>
+      <td><textarea name="content" required="required"></textarea></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td style='height:30px; line-height:30px;'>
+      
+      
+      
+      <div class='zxzx_wytw' align="center"><input type="submit" class="buttonDeep" style="width:100%; margin-top:15px;" value="提交此评论" tabindex="4" /> </div>
+      
+      
+      </td>
+    </tr>
+  </table>
+  </form>
+</div>
+    </div>
+    
+  </div>
+</div>
+<div class='container_24 clearfix'>
+
+
+</div>
+<hr/>
+<iframe width="950" height="93" src="/index/foot" scrolling="no" frameborder="0"></iframe>
+</body>
+</html>

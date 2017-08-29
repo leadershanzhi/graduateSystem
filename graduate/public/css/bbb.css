@@ -1,0 +1,309 @@
+/* CSS Document */
+body {
+	background: none;
+}
+#body_tjxx {
+	border: 1px solid #ddd;
+	height: 100%;
+}
+#body_tjxx_bg {
+	float: left;
+	background: #F0F0F0;
+	background: url(/tiaoji/img/dot_line_h.gif) 173px 0px #F0F0F0 repeat-y;
+}
+.tjMain {
+	width: 950px;
+	margin: 8px auto 0 auto;
+	background-color: #30769E;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#30769E), to(#EAF3F3)); /* Saf4+, Chrome */
+	background-image: -webkit-linear-gradient(top, #30769E, #EAF3F3); /* Chrome 10+, Saf5.1+ */
+	background-image: -moz-linear-gradient(top, #30769E, #EAF3F3); /* FF3.6 */
+	background-image: -ms-linear-gradient(top, #30769E, #EAF3F3); /* IE10 */
+	background-image: -o-linear-gradient(top, #30769E, #EAF3F3); /* Opera 11.10+ */
+	background-image: linear-gradient(top, #30769E, #EAF3F3);
+ filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#30769E', EndColorStr='#EAF3F3');
+}
+.tjMainTitle {
+	width: 600px;
+	margin: 0 auto;
+	padding-top: 10px;
+	font-size: 18px;
+	font-weight: 600;
+	color: #ffffff;
+	text-align: center;
+	line-height: 22px;
+	height: 22px;
+}
+.tjMainBtm {
+	width: 950px;
+	min-height: 300px;
+	margin: 10px auto 0 auto;
+	padding-bottom: 10px;
+}
+.tjrepeat {
+	width: 950px;
+	margin: 0 auto;
+	height: auto!important;
+	height: 450px;
+	min-height: 470px;
+}
+.tjleft, .tjright {
+	float: left;
+	display: inline;
+	background-color: white;
+	border: 2px solid #9EC0F3;
+	padding: 10px 5px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	min-height: 440px;
+}
+.tjleft {
+	width: 190px;
+	margin-left: 10px;
+}
+.tjright {
+	width: 700px;
+	margin-left: 10px;
+	height: 100%;
+}
+ul#menu {
+	height: 130px;
+}
+ul#menu li {
+}
+li.title {
+	margin: 5px auto 10px auto;
+	padding-bottom: 5px;
+	line-height: 22px;
+	font-weight: 600;
+	font-size: 14px;
+	color: #cf3032;
+	letter-spacing: 1px;
+	text-align: center;
+	border-bottom: 2px solid #eee;
+}
+ul#menu li.content {
+	text-indent: 45px;
+	font-size: 14px;
+	height: 22px;
+	line-height: 22px;
+	margin-top: 5px;
+	background: url(/tiaoji/img/tjxx_left_dot.gif) 28px 7px no-repeat;
+}
+ul#menu li.content a:link, a:visited {
+	color: #1E85D6;
+}
+ul#menu li.content a:hover {
+	color: #4EA9F1;/*text-decoration: none;*/
+}
+a:link {
+	color: #4A81E4;
+}
+ul#menu li.content1 {
+	text-indent: 40px;
+	height: 22px;
+	line-height: 22px;
+	background: url(/tiaoji/img/tjxx_left_dot_s.gif) 28px 6px no-repeat;
+}
+ul#menu li.content1 a {
+	color: #777;
+	text-decoration: none;
+}
+ul#menu li.content1 a:hover {
+	color: #000;
+	text-decoration: none;
+}
+.tjleft ul#pic {
+	padding-left: 5px;
+	padding-top: 5px;
+}
+.tjleft ul#pic li {
+}
+.tjleft ul#pic li img {
+	border: 1px solid #CCC;
+}
+.tjleft ul#text {
+	padding-left: 5px;
+	padding-top: 5px;
+}
+.tjleft ul#text li {
+	height: 21px;
+	line-height: 21px;
+	text-indent: 10px;
+}
+.tjleft ul#text li a {
+	color: #336699;
+	text-decoration: none
+}
+.tjleft ul#text li a:hover {
+	color: #F00;
+	text-decoration: none
+}
+.tjleft ul#text li a:visited {
+	color: #336699;
+	text-decoration: none
+}
+.tjright .info {
+	width: 96%;
+	height: 60px;
+	line-height: 26px;
+	margin-bottom: 4px;
+	border-bottom: 1px dashed #ccc;
+	margin: 0 auto;
+	padding-left: 2%;
+	color: red;
+	text-align:center;
+}
+.tjright .content {
+	line-height: 22px;
+	width: 550px;
+	text-align: left;
+	margin: 0 auto;
+}
+/***********************************************************/
+	
+#tooltip {
+	width: 300px;
+	border: 1px solid #669;
+	border-top: 4px solid #669;
+	display: none;
+	word-wrap: break-word; 
+	word-break: break-all;
+	white-space: normal;
+}
+#tooltip table{ table-layout: fixed;}
+#tooltip table td span{
+	width:300px;
+	word-break: break-all; 
+	word-wrap: break-word; 
+	white-space: normal;}
+.HTMLPanelLoadingContent, .HTMLPanelErrorContent {
+	display: none;
+}
+.iframeTooltip {
+	position: absolute;
+	z-index: 1010;
+ filter:alpha(opacity:0.1);
+}
+.HTMLPanelLoading {
+	display: none;
+}
+/***********************************************************/
+/**左边注意事项区域样式**/
+ul.attentions {
+	padding: 5px;
+}
+/**查看页面样式**/
+table.baseTable {
+	width: 680px;
+	border: 1px solid #ddd;
+	margin: 10px;
+	border-top: 0;
+	border-right: 0;
+}
+table.baseTable tr {
+	height: 28px;
+	line-height: 28px;
+}
+table.baseTable tr td {
+	border: 1px solid #dddddd;
+	border-bottom: 0;
+	border-left: 0;
+	padding: 0 6px;
+}
+table.baseTable tr td.tdRight {
+	width: 90px;
+	text-align: right;
+	background-color: #E5F5FC;
+}
+table.baseInfo {
+	margin: 10px;
+	padding: 5px;
+}
+table.baseInfo tr td {
+	padding-left: 6px;
+}
+/**查询区域table样式**/
+table.inquiry {
+	background-color: white;
+	border: 0;
+	border-right: 0;
+	border-bottom: 0;
+	padding: 10px 0;
+}
+table.inquiry tr {
+	height: 32px;
+	line-height: 32px;
+}
+table.inquiry tr td {
+	border: 0;
+}
+table.inquiry tr td.tdRight {
+	width: 120px;
+	background-color: white;
+}
+table.inquiry select, table.inquiry input[type='text'] {
+	width: 120px;
+}
+.tjright h2 {
+	padding: 10px 0 0 10px;
+}
+.redFont {
+	color: red;
+	font-size: 12px;
+}
+/**查询内容内容显示区域样式**/
+table.contentShow tr th {
+	border-right: 1px solid #ddd;
+	border-top: 1px solid #ddd;
+	height: 34px;
+	line-height: 34px;
+}
+table.contentShow tr td {
+}
+table.contentShow tbody {
+	background-color: #ffffff;
+}
+table.contentShow tbody.noMessage {
+}
+table.contentShow tbody.noMessage tr {
+	height: 120px;
+	line-height: 120px;
+	background-color: #FCFDF4;
+}
+table.contentShow tbody.noMessage tr td {
+	padding-left: 20px;
+	font-size: 12px;
+	color: red;
+}
+/**调剂意向内容**/
+table.tjyxContent {
+	margin-top: 20px;
+	border-left: 0;
+}
+table.tjyxContent tr th {
+	height: 40px;
+	line-height: 40px;
+	font-size: 16px;
+	text-align: left;
+}
+table.tjyxContent tr td.firstTd {
+	border-left: 1px solid #ddd;
+}
+table.tjyxContent tr td {
+	background-color: #F5F8FA;
+}
+.sortUp {
+	background: url(../images/up.png) no-repeat 15% 12px
+}
+.sortDown{
+	background: url(../images/down.png) no-repeat 15% 12px
+}
+.sortNull{
+	background: url(../images/sortNull.png) no-repeat 15% 12px
+}
+
+
+div.tooltipContent{ background:#fff;word-wrap: break-word; 
+	word-break: break-all;}

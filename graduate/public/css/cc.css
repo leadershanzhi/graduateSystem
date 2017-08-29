@@ -1,0 +1,405 @@
+/**
+ * ��-�函瑪�刻砭�瑕�-2013�寧�
+ * ��唳�唳�湛�huanghui@2013-09-25
+**/
+.sswt {
+	float: right;
+	margin-top: 10px;
+	margin-bottom: -19px;
+	position: relative;
+	z-index: 1;
+}
+.sszxq {
+	margin: 10px 0;
+}
+.sszxq table {
+	width: 100%;
+}
+.sszxq table td {
+	border: 1px solid #CCC;
+	text-align: center;
+	height: 26px;
+	line-height: 26px;
+	background-color: #F4FAFD;
+	color: #ccc;
+	width: 60px;
+}
+.table_area {
+	margin-top: 10px;
+}
+/**�Ｘ霂行�**/
+.yxxq {
+	border: 1px solid #ddd;
+	height: 150px;
+	margin-top: 10px;
+}
+.forum_time {
+	float: right;
+	margin-right: 10px;
+}
+.base_info {
+	border: 1px solid #DDD;
+	margin-top: 10px;
+	padding: 10px;
+	border-top: 1px solid #0556A0;
+}
+/**��刻砭�箏�**/
+.twzx {
+	width: 950px;
+	border: 1px solid #ddd;
+	border-top: 2px solid #0556A0;
+}
+.twzx h6 {
+	height: 34px;
+	line-height: 34px;
+	padding-left: 10px;
+	border-bottom: 1px solid #DDD;
+	background-color: #E7FAFF;
+	font-size: 17px;
+}
+.twzx table {
+	margin: 10px;
+	font-size: 14px;
+}
+.twzx table tr {
+	height: 36px;
+	line-height: 36px;
+}
+.twzx table tr td.firstTd {
+	width: 76px;
+	text-align: right;
+	padding-right: 6px;
+}
+.twzx table tr td input[type='text'] {
+	width: 220px;
+	height: 26px;
+	line-height: 26px;
+}
+.twzx table tr td textarea {
+	height: 100px;
+	width: 820px;
+	padding: 4px;
+	font-size: 12px;
+	line-height: 16px;
+	color: #555;
+	border: 1px solid #CCC;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	vertical-align: middle;
+	vertical-align: auto;
+}
+.twzx table tr td input[type='button'] {
+	margin-top: 10px;
+}
+.grey {
+	color: #666;
+	margin-left: 10px;
+}
+/**�★�﹀abs*/
+.tabs {
+	height: 36px;
+	line-height: 35px;
+	margin-top: 10px;
+}
+.tabs ul {
+	float: left;
+	display: inline;
+	width: 220px;
+	font-size: 14px;
+}
+.tabs ul li {
+	float: left;
+	display: inline;
+	padding: 0px 10px;
+	cursor: pointer;
+	background-color: #E7FAFF;
+	border-right: 1px solid #A9CCDE;
+	border-top: 1px solid #A9CCDE;
+}
+.tabs ul li:first-child {
+	border-left: 1px solid #A9CCDE;
+}
+.tabs ul li.onli {
+	background-color: white;
+}
+.tabs ul li a {
+	display: inline-block;
+	height: 34px;
+	line-height: 34px;
+}
+.showAll {
+	height: 24px;
+	line-height: 24px;
+	text-align: center;
+}
+.sch_wdwt {
+	margin: 10px;
+}
+/*�函瑪�刻砭銵冽**/
+.question_table .tablePro {
+	border: 1px solid #ddd;
+}
+.question_table .question_cnt_tr {
+	display: none;
+}
+.question_table .tablePro tr td {
+	border-bottom: 0;
+}
+.question_table .tablePro tr td.first_td {
+	padding-right: 18px;
+	text-align: center;
+}
+.question_table .tablePro tr td.question_t {
+	border-top: 1px solid #C2D5E3;
+}
+.question_table tbody tr:first-child td.question_t {
+	border-top: 0;
+}
+.question_table .tablePro tr td.question_t a.question_t_txt {
+	display: inline-block;
+	width: 600px;
+}
+.icon_q_normal {
+	width: 12px;
+	height: 15px;
+	margin: 8px 0 0 8px;
+	overflow: hidden;
+	background: url(http://t1.chsi.com.cn/gaokao/images/zxzx/zxzx_icon2013.gif) no-repeat 0 -17px;
+}
+.icon_q_top {
+	width: 17px;
+	height: 17px;
+	margin: 8px 0 0 10px;
+	overflow: hidden;
+	background: url(http://t1.chsi.com.cn/gaokao/images/zxzx/zxzx_icon2013.gif) no-repeat top;
+}
+.question_top_txt {
+	font-size: 12px;
+	color: #F00;
+}
+.question_cnt {
+	color: #666666;
+	padding: 6px 10px;
+	background: #F2FCFF;
+	border: 1px solid #C2D5E3;
+	position: relative;
+	left: -3px;
+	top: -3px;
+}
+.question_cnt_n {
+	background: #FFF9EF;
+}
+.question_cnt_top {
+	background: #FDF9F3;
+}
+.question_cnt_arrow_top {
+	width: 14px;
+	height: 8px;
+	background: url(http://t4.chsi.com.cn/gaokao/images/zxzx/zxzx_icon2013.gif) no-repeat 0 -33px;
+	position: absolute;
+	left: 50px;
+	top: -8px;
+ *line-height:9px;
+	z-index: 99;
+}
+.question_cnt_arrow_n {
+	width: 14px;
+	height: 9px;
+	background: url(http://t4.chsi.com.cn/gaokao/images/zxzx/zxzx_icon2013.gif) no-repeat 0 -42px;
+	position: absolute;
+	left: 50px;
+	top: -8px;
+}
+.question_a {
+	border-top: 1px dotted #CCC;
+}
+.buttonDisable {
+	padding: 0 10px;
+	height: 27px;
+	line-height: 25px;
+	vertical-align: bottom;
+	font-size: 12px;
+	border: 1px solid #53A8F7;
+	color: white;
+	-webkit-border-radius: 4px;
+	border-radius: 4px;
+	background-clip: padding-box;
+	-webkit-box-shadow: 0px 0px 4px 0px #DEDEDE;
+	box-shadow: 0px 0px 4px 0px #DEDEDE;
+	background-color: #9CCBF5;
+}
+/**�△**/
+.oldQuestion {
+	float: left;
+}
+.pageDiv {
+	float: right;
+	margin: -10px -10px 10px 10px;
+}
+/**�亦��砍�*/	
+.sqCntTop li {
+	line-height: 24px;
+}
+.sqCntTop li p {
+	text-indent: 4em;
+}
+.sqBody {
+	border: 1px solid #DDD;
+	padding: 10px;
+}
+.sqLeft50 {
+	float: left;
+	width: 50px;
+	text-align: right;
+	font-weight: bold;
+}
+/**�漱��憿菟**/
+.openTimeBody {
+	border: 1px solid #DDD;
+	padding: 10px;
+}
+/**��*/
+.sch_title {
+	text-align: center;
+	font-size: 22px;
+	color: #042F42;
+	font-weight: bold;
+	line-height: 36px;
+}
+.sch_search {
+	margin-bottom: 10px;
+}
+.tjwt_span {
+	height: 16px;
+	display: inline-block;
+	margin-left: 10px;
+	color: #CA2654;
+	left: 0;
+	position: relative;
+	top: 2px;
+}
+/**�園�游�**/
+.more_time {
+	margin-left: 20px;
+}
+.sch_forum_time {
+	text-align: center;
+	margin-top: 10px;
+	position: relative;
+	z-index: 1;
+}
+.opentime {
+	display: none;
+	position: absolute;
+	z-index: 9;
+	text-align: left;
+	border: 1px solid #CCC;
+	background-color: #DFF4F7;
+	padding: 5px 10px;
+	width: 225px;
+}
+.opentime li {
+	height: 28px;
+	line-height: 28px;
+}
+.close_time {
+	float: right;
+}
+.tablePro tr td.cut_line {
+	border-top: 1px solid #0556A0;
+}
+/***/
+.zxzx_sswt {
+	float: right;
+	height: 30px;
+	line-height: 30px;
+}
+.zxzx_sswt .zxzx_sswt_div {
+	float: right;
+	height: 30px;
+	line-height: 30px;
+}
+.zxzx_zsdw {
+	float: left;
+	height: 30px;
+	line-height: 30px;
+}
+.zxzx_sszb {
+	float: left;
+	width: 170px;
+	height: 30px;
+	line-height: 30px;
+	margin-left: 10px;
+}
+.zxzx_sszb .sszb_span {
+	float: left;
+	margin-top: 2px;
+ *margin-top: 0px;
+}
+.zxzx_sszb .choose_selector {
+	float: right;
+	height: 24px;
+	margin-left: 0;
+	margin-top: 3px;
+ *margin-top: 2px;
+	width: 52px;
+	text-align: center;
+}
+.zxzx_sszb .choose_selector span.iconDiv {
+	height: 24px;
+}
+.zxzx_sszb .choose_selector_sub {
+	top: 24px;
+}
+.zxzx_sszb .choose_span {
+	display: inline-block;
+	margin-top: 2px;
+	margin-top: 2px\9;
+}
+/***���***/
+.zxzx_wytw {
+	float: right;
+	height: 30px;
+	line-height: 30px;
+	margin-top: 2px\9;
+ *margin-top:-2px;
+}
+.zxzx_search {
+	float: right;
+	margin-right: 10px;
+	height: 30px;
+	line-height: 30px;
+}
+input.input_text {
+	width: 150px;
+	color: #AAA9A9;
+	height: 24px;
+	line-height: 24px;
+	padding-left: 3px;
+	font-size: 12px;
+	border: 1px solid #CCC;
+}
+.input_title {
+ *position:relative;
+ *left:0;
+ *top:-5px;
+ *z-index:0;
+}
+a.buttonDeep {
+	color: white;
+	line-height: 25px;
+	height: 25px;
+	margin-top: 2px;
+	margin-top: 0px\0;
+}
+a.buttonDeep:hover {
+	text-decoration: none;
+}
+.sch_checkbox {
+	height: 40px;
+	line-height: 40px;
+	display: inline-block;
+	_margin-top: 10px;
+	_height: 30px;
+}

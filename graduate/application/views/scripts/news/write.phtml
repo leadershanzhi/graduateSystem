@@ -1,0 +1,199 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+		<meta http-equiv="content-type" content="text/html;charset=utf-8"/>
+</head>
+<style type="text/css">
+<!--
+body {
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	background-color: #F8F9FA;
+}
+-->
+</style>
+<script type="text/javascript" src='/js/jquery.js'></script>
+<script src="/ckeditorr/ckeditor.js"></script>
+<?php 
+$sc=$this->sc;
+$dy=$sc['dyscore'];
+$zy=$sc['zyscore'];
+$tms=$sc['sumscore'];
+?>
+<script type="text/javascript">
+$(function($) {
+    $('.jclock').jclock();
+});
+function scorechange(){
+	var dy=document.f.dyscore.value;
+	var zy=document.f.zyscore.value;
+	var sum=eval(dy)+eval(zy);
+	document.f.sumscore.value=sum;
+}
+function scorechangee(){
+	var tms=document.f.tms.value;
+	var bs=document.f.bs.value;
+	var ms=document.f.ms.value;
+	var sum=eval(tms)+eval(bs)+eval(ms);
+	document.f.allscore.value=sum;
+	
+}
+
+	function shows(){
+		document.getElementById("ss").style.display="block";
+		document.getElementById("s").style.display="none";
+	}
+    function show(){
+		document.getElementById("s").style.display="block";
+		document.getElementById("ss").style.display="none";
+	}
+	function eclipse(){
+	    document.getElementById("s").style.display="none";
+	    document.getElementById("ss").style.display="none";
+	}
+	function init(){
+	    document.getElementById("s").style.display="none";
+	    document.getElementById("ss").style.display="none";
+	}
+</script>
+<link href="/images/skin.css" rel="stylesheet" type="text/css" />
+<body onLoad="init()">
+<table width="100%" border="0" cellpadding="0" cellspacing="0" align="center">
+  <tr>
+    <td width="17" height="29" valign="top" background="/images/mail_leftbg.gif"><img src="/images/left-top-right.gif" width="17" height="29" /></td>
+    <td width="935" height="29" valign="top" background="/images/content-bg.gif"><table width="100%" height="31" border="0" cellpadding="0" cellspacing="0" class="left_topbg" id="table2">
+      <tr>
+        <td height="31"><div class="titlebt">发布消息</div></td>
+      </tr>
+    </table></td>
+    <td width="16" valign="top" background="/images/mail_rightbg.gif"><img src="/images/nav-right-bg.gif" width="16" height="29" /></td>
+  </tr>
+  <tr>
+    <td height="71" valign="middle" background="/images/mail_leftbg.gif">&nbsp;</td>
+    <td valign="top" bgcolor="#F7F8F9"><table width="100%" height="138" border="0" cellpadding="0" cellspacing="0">
+      <tr>
+        <td height="13" valign="top">&nbsp;</td>
+      </tr>
+      <tr>
+        <td valign="top"><table width="98%" border="0" align="center" cellpadding="0" cellspacing="0">
+          <tr>
+            <td class="left_txt">当前位置：学校信息管理-发布消息</td>
+          </tr>
+          <tr>
+            <td height="20"><table width="100%" height="1" border="0" cellpadding="0" cellspacing="0" bgcolor="#CCCCCC">
+              <tr>
+                <td></td>
+              </tr>
+            </table></td>
+          </tr>
+          <tr>
+            <td><table width="100%" height="55" border="0" cellpadding="0" cellspacing="0">
+              <tr>
+                <td width="10%" height="55" valign="middle"><img src="/images/title.gif" width="54" height="55"></td>
+                <td width="90%" valign="top"><span class="left_txt2">在这里，您可以根据您的网站要求，修改设置网站的</span><span class="left_txt3">基本参数</span><span class="left_txt2">！</span><br>
+                          <span class="left_txt2">包括</span><span class="left_txt3">网站名称，网址，网站备案号，联系方式，网站公告，关键词，风格</span><span class="left_txt2">等以及网站</span><span class="left_txt3">会员及等级积分设置</span><span class="left_txt2">。 </span></td>
+              </tr>
+            </table></td>
+          </tr>
+          <tr>
+            <td>&nbsp;</td>
+          </tr>
+          <tr>
+            <td><table width="100%" height="31" border="0" cellpadding="0" cellspacing="0" class="nowtable">
+              <tr>
+                <td class="left_bt2">&nbsp;&nbsp;&nbsp;&nbsp;发表通知信息</td>
+              </tr>
+            </table></td>
+          </tr>
+          <tr>
+          
+            <td><table width="100%" border="0" cellspacing="0" cellpadding="0">
+			<form name="f" method="POST" action="/news/issue">
+           
+              <tr>
+                <td height="17" colspan="4" align="right" ><table width="100%" class="nowtable">
+				  <tr>
+                    <td width="10%" scope="col">&nbsp;</td>
+                    <td width="80%" scope="col" bgcolor="#f2f2f2" class="left_txt2">
+					    选择消息类型：：
+   图文信息<input name="mess" type="radio" value="" onClick="eclipse()" checked="checked"/>&nbsp;&nbsp;
+   推荐分数<input name="mess" type="radio" value="" onClick="show()" />&nbsp;&nbsp;
+   录取分数<input name="mess" type="radio" value="" onClick="shows()" />
+   <span id="s">
+
+  <fieldset>
+    <legend align="center">推免成绩要求</legend>
+                德育：<input type="text"  name="dyscore" onchange="scorechange()" pattern="[1-9][0-9]" title="分数为1-100之间" required="required" value="60" size="6" style="border: solid 1px #27B3FE; height: 15px; background-color: #FFFFFF"/> 
+	 + 智育：<input type="text"  name="zyscore" onchange="scorechange()" pattern="[1-9][0-9]" title="分数为1-100之间" required="required" value="60" size="6" style="border: solid 1px #27B3FE; height: 15px; background-color: #FFFFFF"/>
+     <=总分：<input type="text" name="sumscore" pattern="[1-9][0-9]*" title="填写多余德育和智育的成绩" required="required" value="120" size="8" style="border: solid 1px #27B3FE; height: 15px; background-color: #FFFFFF"/>。
+   </fieldset>
+   </span>
+   
+   <span id="ss">
+
+  <fieldset>
+    <legend align="center">录取成绩要求</legend>
+                      德育：<input type="text" value="<?php echo $dy?>" disabled size="1" style=" height: 12px; background-color: #00ffff"/> 
+	 + 智育：<input type="text" value="<?php echo $zy?>" disabled size="1" style=" height: 12px; background-color: #00ffff"/>
+     < &nbsp;=推荐总分：<input type="text" name="tms" value="<?php echo $tms?>" disabled size="1" style=" height: 12px; background-color: #00ffff"/> 
+     + 笔试：<input type="text"  name="bs" title="分数为1-150之间" required="required" onchange="scorechangee()" pattern="[1-9][0-9]*" title="分数为1-150之间" required="required" value="0" size="4" style="border: solid 1px #27B3FE; height: 15px; background-color: #FFFFFF"/> 
+	 + 面试：<input type="text"  name="ms" title="分数为1-150之间" required="required" onchange="scorechangee()" pattern="[1-9][0-9]*" title="分数为1-150之间" required="required" value="0" size="4" style="border: solid 1px #27B3FE; height: 15px; background-color: #FFFFFF"/>
+     < &nbsp;=录取总分：<input type="text" name="allscore"  value="" size="4" style="border: solid 1px #27B3FE; height: 15px; background-color: #FFFFFF"/>.
+   </fieldset>
+   </span>
+					</td>
+                    <td width="10%" scope="col">&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <th width="10%" scope="col">&nbsp;</th>
+                    <td width="80%" scope="col" height="30" class="left_txt">通知标题：<input name="title" required="required" type="text"  size="25"></td>
+                     <th width="10%" scope="col">&nbsp;</th>
+                  </tr>
+                  <tr>
+                    <th width="10%" scope="col">&nbsp;</th>
+                    <th width="80%" scope="col"><textarea name="editor1" id="edit"></textarea></th>
+                    <th width="10%" scope="col">&nbsp;</th>
+                  </tr>
+                </table></td>
+              </tr>
+              <tr>
+                <td height="30" colspan="4" align="right" class="left_txt2"><table width="100%" height="31" border="0" cellpadding="0" cellspacing="0" class="nowtable">
+                   <tr>
+                <td height="30" colspan="4" align="center"><input type="submit" value="确定发布此消息"/></td>
+                </tr>
+                </table></td>
+              </tr>
+             
+              </form>
+            </table></td>
+          </tr>
+        </table>
+          </td>
+      </tr>
+    </table></td>
+    <td background="/images/mail_rightbg.gif">&nbsp;</td>
+  </tr>
+  <tr>
+    <td valign="middle" background="/images/mail_leftbg.gif"><img src="/images/buttom_left2.gif" width="17" height="17" /></td>
+      <td height="17" valign="top" background="/images/buttom_bgs.gif"><img src="/images/buttom_bgs.gif" width="17" height="17" /></td>
+    <td background="/images/mail_rightbg.gif"><img src="/images/buttom_right2.gif" width="16" height="17" /></td>
+  </tr>
+</table>
+<script type="text/javascript">
+
+   // 启用 CKEitor 的上传功能，使用了 CKFinder 插件
+
+CKEDITOR.replace(  'editor1',
+		{
+		filebrowserBrowseUrl :  '/ckfinder/ckfinder.html',
+		filebrowserImageBrowseUrl :  '/ckfinder/ckfinder.html?Type=Images',
+		filebrowserFlashBrowseUrl :  '/ckfinder/ckfinder.html?Type=Flash',
+		filebrowserUploadUrl :  '/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Files',
+		filebrowserImageUploadUrl  :  '/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Images',
+		filebrowserFlashUploadUrl  :  '/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Flash'
+		});
+
+</script>
+</body>

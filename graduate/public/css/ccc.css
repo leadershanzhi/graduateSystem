@@ -1,0 +1,95 @@
+/* CSS Document */
+/*	#main_page and  #main_page_border --> common.css	*/
+	
+	
+	
+	
+	
+	
+/* 		login		 */	
+#login_top{
+	height:50px;
+	margin-top:5px;
+	border-left:1px solid #2ea902;
+	border-right:1px solid #2ea902;
+	text-align:left;
+	background:url(http://yz.chsi.com.cn/img/login_top_bg_line.gif) top repeat-x;
+}
+#login_top #title{
+	height:21px;
+	margin-top:10px;
+	margin-left:20px;
+	color:#FFF;
+	font-size:16.8px;
+	letter-spacing:3px;
+	font-weight:600;
+	background-color:transparent;
+}
+
+#login_middle{
+	height:160px;
+	border-left:1px solid #2ea902;
+	border-right:1px solid #2ea902;
+}
+	#login_middle_left{
+		float:left;
+		width:360px;
+		height:100%;
+	}
+	#login_middle_left ul{
+		padding:6px;
+	}
+	#login_middle_left ul li{
+		line-height:22px;
+		text-indent:2em;
+		color:#009900;
+	}
+	#login_middle_left ul li#reg{
+		padding-top:5px;
+		text-align:center;
+	}		
+	#login_middle_right{
+		float:left;
+		width:180px;
+		height:100%;
+	}
+	#login_middle_right ul{
+		padding:5px 0 0 17px;
+		border-left:1px dashed #2ea902;
+	}
+	#login_middle_right ul li{
+		line-height:28px;
+		height:28px;
+	}
+	#login_middle_right ul li input{
+		border:0px;
+		border-bottom:1px solid #333;
+		color:#FF0000;
+	}	
+	#login_middle_right ul li.error{
+		color:#FF0000;
+		font-weight:600;
+	}		
+	#login_middle_right ul li.pic{
+		padding-top:3px !important;
+		padding-top:7px;
+	}
+	#login_middle_right ul li.pic a{
+		text-decoration:underline;
+	}		
+
+
+#login_bottom{
+	height:40px;
+	text-align:center;
+	line-height:40px;
+	background:url(http://yz.chsi.com.cn/img/star.gif) 124px 13px no-repeat;
+	border:1px solid #2ea902;
+	border-top:1px dashed #2ea902;
+}	
+	#login_bottom a{
+		color:#333;
+	}
+	#login_bottom a:hover{
+		color:#333;
+	}

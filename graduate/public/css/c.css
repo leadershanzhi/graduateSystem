@@ -1,0 +1,102 @@
+@charset "utf-8";
+/* CSS Document */
+/*
+ * author: opencss
+ * date:201307
+ * design for user
+*/
+
+/* common */
+#content{  background:#f1f1f1; margin-top:5px}
+#user_box{ margin:10px; border:solid 1px #c9c9c9; background:#fff;}
+
+.user-bh{ background:url(../images/user_attr.png) repeat-x; height:46px; line-height:46px;}
+.user-bh h2{ font-size:16px; color:#fff; padding-left:60px; background:url(../images/user_attr.png) no-repeat -670px -203px;}
+.user-bd{ padding:10px;}
+
+.step_box{ height:42px; width:630px; background-image:url(../../images/custom/user_attr.png); background-repeat:no-repeat; /*margin-left:80px;*/ margin:0px auto; }
+.step_box ul,.step_box li{ display:inline; float:left; line-height:42px; font-size:12px; font-weight:bold; color:#333;}
+/*login*/
+.login_tip{ border:solid 1px #eaeaea; background-color:#f6f6f6; padding:10px 20px; margin:20px auto; width:500px;}
+.login_tip p{ padding:0px; margin:0px; font-size:14px}
+.login_form { height:310px;}
+.login_form table{ margin:0px auto; }
+.login_form td{  padding:5px; vertical-align:middle;}
+/*register*/
+#step_01{ background-position:0px -70px;}
+#step_02{ background-position:0px -142px;}
+#step_03{ background-position:0px -210px;}
+
+.step01{ width:175px; height:42px; overflow:hidden; margin-left:50px;}
+.step02{width:175px; height:42px; overflow:hidden; margin-left:70px}
+.step03{width:100px; height:42px; overflow:hidden; margin-left:45px}
+
+#step_01 .step01,#step_02 .step02,#step_03 .step03{ color:#735600;}
+#step_02 .step01,#step_03 .step01,#step_03 .step02{ color:#fff;}
+
+
+.register_agreement{ margin:10px auto; width:720px;   }
+.register_agreement textarea{ 
+   line-height:22px;
+    border: 1px solid #CCCCCC;
+    border-radius: 3px 3px 3px 3px;
+    color: #555555;
+    display: inline-block;
+    font-size: 12px;    
+    padding-left: 3px;
+    vertical-align: middle;
+    width: 720px;
+	height: 500px;
+	overflow:auto;
+	margin:0px auto;
+}
+.register_agreement p{ margin:15px auto;}
+.register_form{ margin:15px 40px;}
+.register_form table { margin-left:auto;  margin-right:auto;}
+.register_form table td{ vertical-align:middle;  padding:5px;}
+table.register_info { margin-left:40px; margin-top:10px;}
+table.register_info td{ padding:0px;}
+input.bbsInput_short{
+	display: inline-block;
+	width: 170px;
+	height: 24px;
+	padding-left: 3px;
+	font-size: 12px;
+	color: #555555;
+	border: 1px solid #cccccc;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	vertical-align: middle;
+}
+
+input.bbsInput_short:hover{
+	border-color: rgba(82,168,236,.8);
+	-webkit-box-shadow: inset 0 1px 3px rgba(0,0,0,.1), 0 0 8px rgba(82,168,236,.6);
+	-moz-box-shadow: inset 0 1px 3px rgba(0,0,0,.1), 0 0 8px rgba(82,168,236,.6);
+	box-shadow: inset 0 1px 3px rgba(0,0,0,.1), 0 0 8px rgba(82,168,236,.6);
+	outline: 0;
+}
+
+.register_success{ margin:15px auto; height:400px;}
+.register_success h3{  padding-top:40px; padding-left:85px; height:40px; background:url(../images/user_attr.png) no-repeat -665px -55px; font-size:24px; margin:70px 10px 70px 270px;}
+.register_success p{ font-size:14px; line-height:26px;  margin:0 80px 0px 30px}
+
+/*resetpwd*/
+
+.resetpwd{ margin:0 40px; padding-top:10px;}
+.resetpwd h3{ font-size:16px; height:40px; line-height:40px; border-bottom:solid 2px #0556a0; color:#0556a0; margin-bottom:25px;}
+.resetpwd table td{ padding:5px; vertical-align:middle;}
+.error_tips{ border:solid 1px #5aa7ec; background:#dfeaf4; padding:5px 15px; display: block;}
+
+.resetpwd_success{ margin:15px auto; height:320px;}
+.resetpwd_success h3{  padding-top:40px; padding-left:85px; height:40px; background:url(../images/user_attr.png) no-repeat -665px -55px; font-size:24px; margin:70px 10px 70px 270px;}
+.resetpwd_success p{ font-size:14px; line-height:26px;  margin:0 80px 0px 30px}
+
+
+/*usercenter*/
+.yz_loginAfter{ float:right; color:#FFF; font-size:14px; padding-right:20px;}
+.yz_loginAfter a{ color:#fff;}
+.usercenter{ padding:10px 40px; height:340px;}
+.usercenter h3{ font-size:16px; height:40px; line-height:40px; border-bottom:solid 2px #0556a0; color:#0556a0; margin-bottom:25px;}
+.usercenter table td{ padding:5px; vertical-align:middle; height:28px; line-height:28px; padding-right:15px;}

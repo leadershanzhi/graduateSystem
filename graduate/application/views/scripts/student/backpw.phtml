@@ -1,0 +1,147 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+		<meta http-equiv="content-type" content="text/html;charset=utf-8"/>
+</head>
+<title>用户登录</title>
+<link rel="stylesheet" type="text/css" href='/css/a.css'/>
+<link rel="stylesheet" type="text/css" href='/css/b.css'/>
+<link rel="stylesheet" type="text/css" href='/css/c.css'/>
+
+<script type="text/javascript">
+ function refresh_code()
+ {
+	 form1.imgcode.src="/php/verifycode.php?a="+Math.random();
+ }
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-100524-7']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+<body>
+
+<style type="text/css">
+#head_wrap {
+    clear: both;
+	background:#fff;
+    font: 12px/1.5 '微软雅黑','宋体',Arial,Helvetica,sans-serif;
+    margin: 0 auto;
+    padding: 0 10px;
+    width: 950px;
+}
+#head_wrap h1 {
+    background: url("/images/logologinn.png") no-repeat scroll 0 25px transparent;
+    color: #FFFFFF;
+    font-size: 1px;
+    height: 76px;
+    line-height: 160px;
+    overflow: hidden;
+    position: relative;
+    width: 536px;
+}
+#head_wrap h1 a {
+    display: block;
+    height: 76px;
+    left: 0;
+    line-height: 76px;
+    position: absolute;
+    top: 0;
+    width: 536px;
+}
+#head_wrap h1 a:hover {
+    text-decoration: none;
+}
+</style>
+<div id="head_wrap">
+  <h1>高校研究生推免管理<a href="/">&nbsp;</a></h1>
+</div>
+  <div id="content" class="container_24 clearfix">
+  <div class="clearfix" id="user_box">
+  <div class="user-bh"><h2>找回密码</h2></div>
+ 
+  <div class="user-bd">
+  <!-- 11111111111111111111111111111111111111111111111111 -->
+  <div class="resetpwd">
+  <h3>1.找回密码-输入身份号</h3>
+  
+  <form action="/student/backpw" method="post">
+  <table border="0" cellpadding="0" cellspacing="0" >
+  <tbody>
+  <tr>
+  <td class="text_right" width="160">输入您的身份号：</td>
+  <td>
+  <input class="bbsInput_short" required="required" name="id" type="text" value="<?php echo $this->tipid?>" /></td>
+  </tr>
+  
+  <tr>
+   <td >&nbsp;</td>
+  <td colspan="2">
+  <?php if($this->tag=='1'){
+  echo "<font class=error_tips color=gray>没有此用户</font>";
+ }?>
+  <input type="submit" class="buttonDeep" style="width:120px; margin-top:15px;" value="下一步" />
+  </td>
+  </tr>
+  </tbody>
+  </table>
+  </form>
+  
+ <!-- 1111111111111111111111111111111111111111111111111111 -->
+<?php if($this->tag=='2'){
+	echo "
+  <h3>2。找回密码-输入E-Mail</h3>
+  
+  <form action=/student/backpw method=post>
+  <table border=0 cellpadding=0 cellspacing=0 >
+  <tbody>
+   <tr>
+  <td class=text_right width=160>用户名：</td>
+  <td class=red><strong>$this->tipid</strong></td>
+  </tr>
+  <tr>
+  <td class=text_right width=160>请输入您的E-mail地址：</td>
+  <td>
+  <input class=bbsInput_short type=email name=mail title='注意格式：比如XXX@163.com' required=required /></td>
+  </tr>
+  
+  <tr>
+   <td >&nbsp;</td>
+  <td colspan=2>";
+  if($this->ta=='2'){
+      echo "<font class=error_tips color=gray>没有此邮件地址，或者此邮件地址和用户名不匹配</font>";
+  }
+
+  echo "  <br/>
+  <input type=submit class=buttonDeep style=width:120px; margin-top:15px; value=找回密码 />
+  </td>
+  </tr>
+  </tbody>
+  </table>
+  <input type=hidden name=id value=$this->tipid>
+</form>";
+
+}?>
+  
+  </div>
+  <!-- 1111111111111111111111111111111111111111111111111111111111 -->
+  </div>
+  </div>
+  </div>
+  
+
+
+<hr/>
+<div align=center>
+<iframe width="950" height="93" src="/index/foot" scrolling="no" frameborder="0"></iframe>
+</div>
+
+
+</body>
+</html>

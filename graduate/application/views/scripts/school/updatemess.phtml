@@ -1,0 +1,393 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+		<meta http-equiv="content-type" content="text/html;charset=utf-8"/>
+</head>
+<style type="text/css">
+<!--
+body {
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	background-color: #F8F9FA;
+}
+-->
+</style>
+<script src="/js/jquery-1.8.3.js" type="text/javascript"></script>
+<style type="text/css">
+#one{width:200px; height:180px; float:left}
+#two{width:50px; height:180px; float:left}
+#three{width:200px; height:180px; float:left}
+.btn{width:50px; height:30px; margin-top:10px; cursor:pointer;}
+</style>
+<script type="text/javascript">
+//下拉框交换JQuery
+$(function(){
+    //移到右边
+    $('#add').click(function() {
+    //获取选中的选项，删除并追加给对方
+        $('#select1 option:selected').appendTo('#select2');
+    });
+    //移到左边
+    $('#remove').click(function() {
+        $('#select2 option:selected').appendTo('#select1');
+    });
+    //全部移到右边
+    $('#add_all').click(function() {
+        //获取全部的选项,删除并追加给对方
+        $('#select1 option').appendTo('#select2');
+    });
+    //全部移到左边
+    $('#remove_all').click(function() {
+        $('#select2 option').appendTo('#select1');
+    });
+    //双击选项
+    $('#select1').dblclick(function(){ //绑定双击事件
+        //获取全部的选项,删除并追加给对方
+        $("option:selected",this).appendTo('#select2'); //追加给对方
+    });
+    //双击选项
+    $('#select2').dblclick(function(){
+       $("option:selected",this).appendTo('#select1');
+    });
+});
+
+</script>
+<script type="text/javascript">
+	function selectAll(){
+		var selectedComs = document.getElementById("select2"); 
+		if(selectedComs.length==0){
+			alert("请选择院系");
+			return false;
+		}else{
+			for(var i=0;i<selectedComs.length;i++){  
+				selectedComs.options[i].selected = true; 
+				alert(selectedComs.options[i].value); 
+			} 
+			//表单提交操作 
+		} 
+		
+		
+		return true;  
+	}
+	function sub(){
+		var selectedComs = document.getElementById("select2"); 
+		if(selectedComs.length==0){
+			alert("请添加院系");
+		}else{
+			document.forms["myForm"].submit();;
+		}	
+    }
+</script>
+<script type="text/javascript">  
+  
+  
+                //图片上传预览    IE是用了滤镜。  
+        function previewImage(file)  
+        {  
+          var MAXWIDTH  = 160;   
+          var MAXHEIGHT = 100;  
+          var div = document.getElementById('preview');  
+          if (file.files && file.files[0])  
+          {  
+              div.innerHTML ='<img id=imghead>';  
+              var img = document.getElementById('imghead');  
+              img.onload = function(){  
+                var rect = clacImgZoomParam(MAXWIDTH, MAXHEIGHT, img.offsetWidth, img.offsetHeight);  
+                img.width  =  rect.width;  
+                img.height =  rect.height;  
+//                 img.style.marginLeft = rect.left+'px';  
+                img.style.marginTop = rect.top+'px';  
+              }  
+              var reader = new FileReader();  
+              reader.onload = function(evt){img.src = evt.target.result;}  
+              reader.readAsDataURL(file.files[0]);  
+          }  
+          else //兼容IE  
+          {  
+            var sFilter='filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod=scale,src="';  
+            file.select();  
+            var src = document.selection.createRange().text;  
+            div.innerHTML = '<img id=imghead>';  
+            var img = document.getElementById('imghead');  
+            img.filters.item('DXImageTransform.Microsoft.AlphaImageLoader').src = src;  
+            var rect = clacImgZoomParam(MAXWIDTH, MAXHEIGHT, img.offsetWidth, img.offsetHeight);  
+            status =('rect:'+rect.top+','+rect.left+','+rect.width+','+rect.height);  
+            div.innerHTML = "<div id=divhead style='width:"+rect.width+"px;height:"+rect.height+"px;margin-top:"+rect.top+"px;"+sFilter+src+"\"'></div>";  
+          }  
+        }  
+        function clacImgZoomParam( maxWidth, maxHeight, width, height ){  
+            var param = {top:0, left:0, width:width, height:height};  
+            if( width>maxWidth || height>maxHeight )  
+            {  
+                rateWidth = width / maxWidth;  
+                rateHeight = height / maxHeight;  
+                  
+                if( rateWidth > rateHeight )  
+                {  
+                    param.width =  maxWidth;  
+                    param.height = Math.round(height / rateWidth);  
+                }else  
+                {  
+                    param.width = Math.round(width / rateHeight);  
+                    param.height = maxHeight;  
+                }  
+            }  
+              
+            param.left = Math.round((maxWidth - param.width) / 2);  
+            param.top = Math.round((maxHeight - param.height) / 2);  
+            return param;  
+        }  
+</script> 
+
+
+<script type="text/javascript" src='/js/jquery.js'></script>
+<script src="/ckeditorr/ckeditor.js"></script>
+<link href="/images/skin.css" rel="stylesheet" type="text/css" />
+<body>
+<table width="100%" border="0" cellpadding="0" cellspacing="0" align="center">
+  <tr>
+    <td width="17" height="29" valign="top" background="/images/mail_leftbg.gif"><img src="/images/left-top-right.gif" width="17" height="29" /></td>
+    <td width="935" height="29" valign="top" background="/images/content-bg.gif"><table width="100%" height="31" border="0" cellpadding="0" cellspacing="0" class="left_topbg" id="table2">
+      <tr>
+        <td height="31"><div class="titlebt">查改信息</div></td>
+      </tr>
+    </table></td>
+    <td width="16" valign="top" background="/images/mail_rightbg.gif"><img src="/images/nav-right-bg.gif" width="16" height="29" /></td>
+  </tr>
+  <tr>
+    <td height="71" valign="middle" background="/images/mail_leftbg.gif">&nbsp;</td>
+    <td valign="top" bgcolor="#F7F8F9"><table width="100%" height="138" border="0" cellpadding="0" cellspacing="0">
+      <tr>
+        <td height="13" valign="top">&nbsp;</td>
+      </tr>
+      <tr>
+        <td valign="top"><table width="98%" border="0" align="center" cellpadding="0" cellspacing="0">
+          <tr>
+            <td class="left_txt">当前位置：学校信息管理</td>
+          </tr>
+          <tr>
+            <td height="20"><table width="100%" height="1" border="0" cellpadding="0" cellspacing="0" bgcolor="#CCCCCC">
+              <tr>
+                <td></td>
+              </tr>
+            </table></td>
+          </tr>
+          <tr>
+            <td><table width="100%" height="55" border="0" cellpadding="0" cellspacing="0">
+              <tr>
+                <td width="10%" height="55" valign="middle"><img src="/images/title.gif" width="54" height="55"></td>
+                <td width="90%" valign="top"><span class="left_txt2">在这里，您可以根据您的网站要求，修改设置网站的</span><span class="left_txt3">基本参数</span><span class="left_txt2">！</span><br>
+                          <span class="left_txt2">包括</span><span class="left_txt3">网站名称，网址，网站备案号，联系方式，网站公告，关键词，风格</span><span class="left_txt2">等以及网站</span><span class="left_txt3">会员及等级积分设置</span><span class="left_txt2">。 </span></td>
+              </tr>
+            </table></td>
+          </tr>
+          <tr>
+            <td>&nbsp;</td>
+          </tr>
+          <tr>
+            <td><table width="100%" height="31" border="0" cellpadding="0" cellspacing="0" class="nowtable">
+              <tr>
+                <td class="left_bt2">&nbsp;&nbsp;&nbsp;&nbsp;高校基本信息</td>
+              </tr>
+            </table></td>
+          </tr>
+          <tr>
+            <td>
+            <!-- 1111111111111111111111111111111填写form表单 -->
+             <?php foreach ($this->res as $item){?>
+            <form action="/school/updateupload" method="post" name='myForm' enctype="multipart/form-data">
+            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td width="20%" height="30" align="right" bgcolor="#f2f2f2" class="left_txt2">高校名称：</td>
+                <td width="3%" bgcolor="#f2f2f2">&nbsp;</td>
+                <td width="32%" height="30" bgcolor="#f2f2f2"><input name="scname" value="<?php echo $item['scname']?>" required="required" type="text" id="title" size="30" /></td>
+                <td width="45%" height="30" bgcolor="#f2f2f2" class="left_txt">学校名称</td>
+              </tr>
+              <tr>
+                <td height="30" align="right" class="left_txt2">高校类型：</td>
+                <td>&nbsp;</td>
+                <td height="30">
+                   <select name="sctype">
+                      <option><?php echo $item['sctype']?></option>
+                      <option>省重点</option>
+			         <option>985工程</option>
+			         <option>211工程</option>
+			        
+                   </select>
+                </td>
+                <td height="30" class="left_txt">985，211，省重点</td>
+              </tr>
+              <tr>
+                <td height="30" align="right" bgcolor="#f2f2f2" class="left_txt2">邮箱地址：</td>
+                <td bgcolor="#f2f2f2">&nbsp;</td>
+                <td height="30" bgcolor="#f2f2f2"><input type="email" name="email" size="30" value="<?php echo $item['email']?>" /></td>
+                <td height="30" bgcolor="#f2f2f2" class="left_txt">正确的邮箱号</td>
+              </tr>
+              <tr>
+                <td height="30" align="right" class="left_txt2">电话信息： </td>
+                <td>&nbsp;</td>
+                <td height="30"><input type="text" name="phone" pattern="[0-9]*" required="required"
+title="请填写正确的联系方式" size="30" value="<?php echo $item['phone']?>"/></td>
+                <td height="30" class="left_txt">推免部门联系电话</td>
+              </tr>
+              <tr>
+                <td height="17" colspan="4" align="right" >&nbsp;</td>
+              </tr>
+              
+              <!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+              
+                  <tr><td colspan=4><table width="100%" height="31" border="0" cellpadding="0" cellspacing="0" class="nowtable">
+              <tr>
+                <td class="left_bt2">&nbsp;&nbsp;&nbsp;&nbsp;高校专业信息设置</td>
+              </tr>
+            </table></td>
+          </tr>
+               
+               <tr>
+       
+                <td colspan="4" align=left >
+                  <table width="72%" align="center" border="0" cellpadding="0" cellspacing="0" class="newContTab">
+    <tr>
+    	<td>
+        	<span style="padding-left:60px;"  class="left_txt">待选推免专业</span><span style="padding-left:200px;"  class="left_txt">已选推免专业</span>
+        </td>
+    </tr>
+  <tr>
+    <td align="center"><div>
+        <div>
+          <select multiple="multiple" id="select1" style="width:180px;height:120px; float:left; border:4px #00ffff outset; padding:4px; ">
+            <?php foreach ($this->sdepts as $ite){
+            	$it=$ite['na'];
+            	$id=$ite['id'];
+            echo "<option value=$id>$it</option>";
+            }?>
+          </select>
+        </div>
+        <div style="float:left; padding-left:40px;"> <span id="add">
+          <input type="button" class="btn" value="->"/>
+          </span><br />   
+          </span> <br />
+          <span id="remove">
+          <input type="button" class="btn" value="<-"/>
+          </span><br />
+       
+          </span> </div>
+        <div>
+          <select multiple="multiple" id="select2" name="majors[]" style="width: 180px;height:120px; float:left;border:4px #00ffff outset; padding:4px;">
+	        <?php foreach ($this->xuansdepts as $xuan){
+            	$xname=$xuan['na'];
+            	$xid=$xuan['sdeptid'];
+            echo "<option value=$xid>$xname</option>";
+            }?>
+          </select>
+        </div>
+      </div></td>
+  </tr>
+
+</table>
+                
+                </td>
+          
+              </tr>
+              <tr><td colspan=4>&nbsp;</td></tr>
+              
+              <!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+              <tr>
+                <td height="17" colspan="4" align="right" >&nbsp;</td>
+              </tr>
+              <tr>
+                <td height="30" colspan="4" align="right" class="left_txt2"><table width="100%" height="31" border="0" cellpadding="0" cellspacing="0" class="nowtable">
+                  <tr>
+                    <td class="left_bt2">&nbsp;&nbsp;&nbsp;&nbsp;门户发布信息</td>
+                  </tr>
+                </table></td>
+              </tr>
+              
+              <tr>
+                <td height="30" colspan="4" class="left_txt2"><table width="100%" height="189" border="0" cellpadding="0" cellspacing="0">
+                  <tr>
+                    <td width="20%" height="30" align="right" bgcolor="#f2f2f2" class="left_txt">图片信息</td>
+                    <td width="23%" height="30" align="right" bgcolor="#f2f2f2" class="left_txt">
+                       <input type="file" name="file" id="file" onchange="previewImage(this)">
+			       </td>
+                    <td width="57%" height="30" align="right" bgcolor="#f2f2f2" class="left_txt">&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td height="62" align="right" class="left_txt">&nbsp;</td>
+                    <td height="62" align="left" class="left_txt">
+	                    <div id="preview">  
+	                        <img id="imghead" width=160 height=100 border=0  src="/upload/<?php echo $item['pic']?>">
+	                        <input type="hidden" name='pic' value="<?php echo $item['pic']?>">   
+	                    </div> 
+                   </td>
+                    <td height="62" align="right" class="left_txt">&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td height="30" align="right" bgcolor="#f2f2f2" class="left_txt">网页介绍</td>
+                    <td height="30" align="right" bgcolor="#f2f2f2" class="left_txt">&nbsp;</td>
+                    <td height="30" align="right" bgcolor="#f2f2f2" class="left_txt">&nbsp;</td>
+                  </tr>
+                  
+                  <tr>
+                    <td colspan="3" align="right">
+					    <table width="100%">
+  <tr>
+    <th width="10%" scope="col">&nbsp;</th>
+    <th width="80%" scope="col">
+   
+    <textarea name="article-body" style="height: 100px">
+				<?php echo $item['content']?>
+			</textarea>
+			 
+    <th width="10%" scope="col">&nbsp;</th>
+  </tr>
+</table>
+
+					
+					</td>
+                  </tr>
+                  
+                </table></td>
+              </tr>
+              <br/>
+              <tr>
+                <td height="30" colspan="4" class="left_txt" align="center">
+              <input type="button" value="确认修改" onclick="sub()"  /></td>
+                 
+            </tr>
+                </td>
+                </tr>
+            </table></td>
+            
+            </form>
+<?php }?>
+          </tr>
+        </table>
+          </td>
+      </tr>
+    </table></td>
+    <td background="/images/mail_rightbg.gif">&nbsp;</td>
+  </tr>
+  <tr>
+    <td valign="middle" background="/images/mail_leftbg.gif"><img src="/images/buttom_left2.gif" width="17" height="17" /></td>
+      <td height="17" valign="top" background="/images/buttom_bgs.gif"><img src="/images/buttom_bgs.gif" width="17" height="17" /></td>
+    <td background="/images/mail_rightbg.gif"><img src="/images/buttom_right2.gif" width="16" height="17" /></td>
+  </tr>
+</table>
+<script type="text/javascript">
+   CKEDITOR.inline( 'article-body' );
+	CKEDITOR.replace(  'editor1',
+		{
+		filebrowserBrowseUrl :  '/ckfinder/ckfinder.html',
+		filebrowserImageBrowseUrl :  '/ckfinder/ckfinder.html?Type=Images',
+		filebrowserFlashBrowseUrl :  '/ckfinder/ckfinder.html?Type=Flash',
+		filebrowserUploadUrl :  '/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Files',
+		filebrowserImageUploadUrl  :  '/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Images',
+		filebrowserFlashUploadUrl  :  '/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Flash'
+		});
+	</script>
+
+	
+</body>

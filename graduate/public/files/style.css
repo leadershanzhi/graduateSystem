@@ -1,0 +1,38 @@
+/*=================首页幻灯片=====================*/
+#container { MARGIN: 0px auto; WIDTH: 300px; height:200px; display:block; overflow:hidden; TEXT-ALIGN: left;background:#F2F5F8;position:relative;}
+#container a{color:#666;text-decoration:none;}
+#container a:hover{color:#c00;text-decoration:underline;}
+#slider { PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: -1px 0px 0px; OVERFLOW: visible; PADDING-TOP: 1px; POSITION: relative; HEIGHT: 200px}
+#slider .sliderItem { LEFT: 0px; OVERFLOW: hidden; WIDTH: 300px; POSITION: absolute; TOP: 1px! important; HEIGHT: 277px;background-repeat: repeat-x; background-position: 0px -1px; }
+#slider .sliderItem IMG { Z-INDEX: 100; RIGHT: 0px; POSITION: absolute; TOP: 0px;display:block;}
+#sliderNav {height:25px; overflow: hidden;width:300px;}
+.sliderNav_left { width:300px;position:absolute;top:145px;z-index:10;}
+#slider h2{clear:both;font-size:12px;font-weight:normal;text-align:center;margin-top: 175px;}
+.siderCon{border-bottom:3px solid #FE9900;width:100%;overflow:hidden;*zoom:1;}
+#sliderNav UL { PADDING: 0px;margin:0px;height: 20px;list-style-type: none;float:right}
+#sliderNav UL LI { FLOAT: left; list-style-type: none;}
+#sliderNav UL LI A { DISPLAY: block; MARGIN: 0px 1px 0px 0px; width: 20px; TEXT-INDENT: -9999px; height: 20px; overflow:hidden; }
+#sliderNav UL LI.one A { BACKGROUND: url(../files/img/button_slidernav.gif) no-repeat;width:20px;height:20px;}
+#sliderNav UL LI.one A.activeSlide { BACKGROUND-POSITION:-20px 0; }
+#sliderNav UL LI.one A:hover { BACKGROUND-POSITION:-20px 0; }
+#sliderNav UL LI.two A.activeSlide { BACKGROUND-POSITION:-20px -25px; }
+#sliderNav UL LI.two A:hover { BACKGROUND-POSITION:-20px -25px; }
+#sliderNav UL LI.three A.activeSlide { BACKGROUND-POSITION:-20px -49px; }
+#sliderNav UL LI.three A:hover { BACKGROUND-POSITION:-20px -49px;}
+#sliderNav UL LI.four A.activeSlide { BACKGROUND-POSITION:-20px -73px; }
+#sliderNav UL LI.four A:hover { BACKGROUND-POSITION: -20px -73px; }
+#sliderNav UL LI.five A.activeSlide { BACKGROUND-POSITION:-20px -97px; }
+#sliderNav UL LI.five A:hover { BACKGROUND-POSITION: -20px -97px; }
+#sliderNav UL LI.six A.activeSlide { BACKGROUND-POSITION:-20px -122px; }
+#sliderNav UL LI.six A:hover { BACKGROUND-POSITION: -20px -122px; }
+#sliderNav UL LI.two A { BACKGROUND: url(../files/img/button_slidernav.gif) no-repeat 0 -25px; }
+#sliderNav UL LI.three A { BACKGROUND: url(../files/img/button_slidernav.gif) no-repeat 0 -49px; }
+#sliderNav UL LI.four A { BACKGROUND: url(../files/img/button_slidernav.gif) no-repeat 0 -73px; }
+#sliderNav UL LI.five A { BACKGROUND: url(../files/img/button_slidernav.gif) no-repeat 0 -97px; }
+#sliderNav UL LI.six A { BACKGROUND: url(../files/img/button_slidernav.gif) no-repeat 0 -122px; }
+#sliderNav A.previous { BACKGROUND: url(../files/img/button_slidernav.png) no-repeat; FLOAT: left; MARGIN: 0px 30px 0px 0px; WIDTH: 20px; TEXT-INDENT: -9999px; POSITION:absolute; TOP: 30px; left:5px;HEIGHT: 20px; overflow:hidden; }
+#sliderNav A.next { BACKGROUND: url(../files/img/button_slidernav.png) no-repeat -54px 0px;FLOAT: right; MARGIN: 0px 5px 0px 0px; WIDTH: 20px; TEXT-INDENT: -9999px; POSITION: absolute; TOP: 30px;right:0px;HEIGHT: 20px; overflow:hidden; }
+
+
+
+
